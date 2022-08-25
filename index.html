@@ -3,6 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        main{
+            position: relative;
+        }
+        header>nav>ol>li{
+            padding-top: 20px;
+            display: inline-block;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        main>section:first-child>img{
+            position: absolute;
+            right: 10px;
+            top: -65px;
+            margin-top: 0;
+        }
+        main>section:nth-child(2){
+            position: relative;
+        }
+
+        main>section:nth-child(2)>nav>ul>a{
+            display: block;
+            padding-bottom: 15px;
+            position: absolute;
+            right: 5px;
+            top: 0;
+        }
+        main>section:nth-child(2)>nav>ul>a>img{
+            width: 35px;
+            height: 35px;
+            top: 0;
+
+        }
+        #HireButton{
+            color: white;
+            background-color: blue;
+        }
+
+    </style>
 </head>
 <body>
 <header>
@@ -12,25 +51,37 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skill">skill</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#contact me">contact me</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#contact me">contact me</a></li>
+
         </ol>
     </nav>
 </header>
 <main>
     <section>
-        <h1>Hello</h1>
-        <h1>I'm Kavindu Nimesh</h1>
+        <h1>Hi I'm Kavindu Nimesh</h1>
+        <h2>Software engineer & Web Developer</h2>
+        <br>
+        <Button id="HireButton">Hire Me</Button>
+        <br>
         <img src="assets/A2.png" alt="Main Image" width="300">
     </section>
     <section>
         <nav>
             <ul>
-                <li>FaceBook</li>
-                <li>Instagram</li>
-                <li>linkedin</li>
+                <a href="https://www.facebook.com/kavindunimesh.hettiarchchi" target="_blank">
+                    <img src="assets/faceBook.png" alt="FaceBook" width="20">
+                </a>
+                <a href="https://www.linkedin.com/in/kavindu-nimesh-05810023a/" target="_blank">
+                    <img src="assets/linkedin.png" alt="Linkedin" width="20">
+                </a>
+                <a href="https://www.instagram.com/mr__kavii/" target="_blank">
+                    <img src="assets/instagram.png" alt="Instagram" width="20">
+                </a>
+
             </ul>
         </nav>
+        </section>
 
     <section>
         <h2><dfn id="about">About</dfn></h2>
@@ -129,13 +180,10 @@
             </li>
             <br>
             <li>
-                <a href="tel:+94789688759">Contact us </a>
-                <br>
                 <a href="mailto:kavindunimesh286@gmail.com">mail us</a>
             </li>
         </ul>
     </footer>
-
 </main>
 </body>
 </html>
