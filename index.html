@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-7">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <meta content="width=device-width initial-scale=1" name="viewport">
     <title>Title</title>
     <style>
-        main{
+        main {
+            height: 100vh;
+            width: 98.79vw;
             position: relative;
+
         }
         header>nav>ol>li{
             padding-top: 20px;
             display: inline-block;
+            list-style: none;
             padding-right: 10px;
             padding-left: 10px;
+            cursor:pointer;
+            color: black;
         }
+        header>nav>ol>li>a{
+            text-decoration: none;
+            color: black;
+        }
+        header>nav>ol>li:first-child{
+            text-decoration: none;
+            color: blue;
+        }
+
         main>section:first-child>img{
             position: absolute;
             right: 10px;
@@ -30,12 +47,50 @@
             right: 5px;
             top: 0;
         }
+        main>section:nth-child(2)>nav>ul>a:first-child{
+            width: 35px;
+            height: 35px;
+            top: -155px;
+            right: 9px;
+            padding-bottom: 20px;
+
+
+
+        }
+        main>section:nth-child(2)>nav>ul>a:nth-child(2){
+            width: 35px;
+            height: 35px;
+            top: -120px;
+            right: 9px;
+            padding-top: 30px;
+
+
+
+        }
+        main>section:nth-child(2)>nav>ul>a:nth-child(3){
+            width: 35px;
+            height: 35px;
+            top: -55px;
+            right: 9px;
+
+            padding-top: 30px;
+
+
+
+        }
         main>section:nth-child(2)>nav>ul>a>img{
             width: 35px;
             height: 35px;
-            top: 0;
+            right: 2px;
+            position: absolute;
 
         }
+        main>section:first-child>h1{
+            position: relative;
+            top: 100px;
+            left :100px
+        }
+
         #HireButton{
             color: white;
             background-color: blue;
