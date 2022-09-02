@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-7">
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <meta charset="UTF-8">
     <meta content="width=device-width initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@700&display=swap" rel="stylesheet">
+
+
     <title>Title</title>
     <style>
-        main {
-            height: 100vh;
-            width: 98.79vw;
-            position: relative;
 
+        main {
+            position: relative;
         }
         header>nav>ol>li{
             padding-top: 20px;
@@ -20,10 +24,18 @@
             padding-left: 10px;
             cursor:pointer;
             color: black;
+            margin: 0;
+        }
+        header>nav>ol{
+            padding-left: 97px;
+            font-size: 23px;
         }
         header>nav>ol>li>a{
             text-decoration: none;
             color: black;
+        }
+        header>nav>ol>li{
+            font-family: 'Glory', sans-serif;
         }
         header>nav>ol>li:first-child{
             text-decoration: none;
@@ -32,50 +44,56 @@
 
         main>section:first-child>img{
             position: absolute;
-            right: 10px;
-            top: -65px;
+            right: 20px;
+            top: -135px;
             margin-top: 0;
+            width: 411px;
+            z-index: 1;
         }
         main>section:nth-child(2){
             position: relative;
         }
+        main>section:nth-child(2)>nav{
+            position: absolute;
+        }
 
         main>section:nth-child(2)>nav>ul>a{
             display: block;
-            padding-bottom: 15px;
+           /* padding-bottom: 15px;*/
             position: absolute;
-            right: 5px;
+            /*right: 5px;*/
             top: 0;
         }
         main>section:nth-child(2)>nav>ul>a:first-child{
             width: 35px;
             height: 35px;
-            top: -155px;
-            right: 9px;
+            top: -217px;
+            right: 16px;
             padding-bottom: 20px;
-
 
 
         }
         main>section:nth-child(2)>nav>ul>a:nth-child(2){
             width: 35px;
             height: 35px;
-            top: -120px;
-            right: 9px;
-            padding-top: 30px;
+            top: -150px;
+            right: 16px;
+            padding-bottom: 20px;
 
-
-
+        }
+        main>section:nth-child(2){
+            left: 1349px;
+            position: absolute;
+            top: 219px;
+            padding: 0;
+            margin: 0;
         }
         main>section:nth-child(2)>nav>ul>a:nth-child(3){
             width: 35px;
             height: 35px;
-            top: -55px;
-            right: 9px;
-
+            top: -113px;
+            right: 16px;
             padding-top: 30px;
-
-
 
         }
         main>section:nth-child(2)>nav>ul>a>img{
@@ -85,16 +103,206 @@
             position: absolute;
 
         }
+        main>section:nth-child(2)>nav>ul{
+
+            right: 0px;
+            top: -57px;
+            position: absolute;
+            margin-right: 0;
+            padding: 0;
+
+        }
         main>section:first-child>h1{
             position: relative;
-            top: 100px;
-            left :100px
+            top: 112px;
+            padding-left:104px;
+            width: 500px;
+            font-size: 60px;
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            font-family: 'Glory', sans-serif;
+
+        }
+        main>section:first-child>h2{
+            position: relative;
+            top: 78px;
+            padding-left: 104px;
+            width: 500px;
+            font-size: 30px;
+            font-family: 'Glory', sans-serif;
+        }
+        main>section:first-child>h1:nth-child(2){
+            margin-top: -16px;
+            padding-left:104px;
         }
 
         #HireButton{
             color: white;
             background-color: blue;
+            left: 105px;
+            top: 326px;
+            position: absolute;
+            width: 163px;
+            height: 42px;
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            font-family: 'Commissioner', sans-serif;
+
         }
+        main>section:first-child>div{
+            right: 79px;
+            top: -40px;
+            position: absolute;
+            margin-top: 0;
+            width: 288px;
+            height: 513px;
+            background-color: #001e80;
+            border-bottom-right-radius: 164px;
+            border-top-left-radius: 164px
+        }
+        main>section:first-child>section{
+            background-color: blue;
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            display: none;
+
+        }
+        main>section:nth-child(3)>h2{
+            left: 594px;
+            position: absolute;
+            top: -1px;
+            /* text-align: center; */
+            font-size: 50px;
+            color: white;
+            font-family: 'Glory', sans-serif;
+
+        }
+        main>section:nth-child(4)>h2{
+            position: relative;
+            padding-left: 63px;
+            font-size: 50px;
+            font-family: 'Glory', sans-serif;
+            margin-bottom: 0;
+
+        }
+        main>section:nth-child(3)>div{
+            top: -405px;
+            position: relative;
+        }
+        main>section:nth-child(3)>article{
+            position: relative;
+            padding-top: 1074px;
+            width: 1023px;
+            padding-left: 254px;
+            height: 520px;
+        }
+        main>section:nth-child(3)>article>pr{
+            position: relative;
+            top: -926px;
+            font-size: 34px;
+            color: white;
+            font-family: 'Glory', sans-serif;
+        }
+        main>section:nth-child(3)>article>div{
+            left: -135px;
+            top: -220px;
+            position: absolute;
+            width: 392px;
+            margin-right: 0;
+
+        }
+        main>section:nth-child(3)>article>div>img{
+            width: 525px;
+        }
+
+        main>section:nth-child(3){
+            margin-top: 0;
+            top: 449px;
+            position: relative;
+            background-color: blue;
+            height: 520px;
+
+        }
+        main>section:nth-child(4){
+            top: 436px;
+            position: relative;
+            height: 634px;
+        }
+        main>section:nth-child(5){
+            position: relative;
+            top: 896px;
+        }
+        main>section:nth-child(3)>h2>dfn{
+            font-style: unset;
+        }
+        main>section:nth-child(4)>h2>dfn{
+            font-style: unset;
+        }
+        main>section:nth-child(4)>section{
+
+            height: 500px;
+            /* left: 111px; */
+            padding-top: 20px;
+            padding-left: 54px;
+            margin: 0;
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 32px;
+        }
+        main>section:nth-child(4)>section>div{
+            border-radius: 30px;
+            height: 250px;
+            width: 263px;
+            background-color: #A9A8CD;
+            position: relative;
+
+        }
+        main>section:nth-child(4)>section>div:first-child>img{
+            border: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 84px;
+        }
+        main>section:nth-child(4)>section>div:nth-child(2)>img{
+            border: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 244px;
+        }
+        main>section:nth-child(4)>section>div:nth-child(3)>img{
+            border: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 149px;
+        }
+        main>section:nth-child(4)>section>div:nth-child(4)>img{
+            border: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width:112px;
+        }
+
+
+
 
     </style>
 </head>
@@ -114,24 +322,30 @@
 </header>
 <main>
     <section>
-        <h1>Hi I'm Kavindu Nimesh</h1>
+        <h1>Hi I'm Kavindu</h1>
+        <h1>Nimesh</h1>
         <h2>Software engineer & Web Developer</h2>
-        <br>
+
         <Button id="HireButton">Hire Me</Button>
-        <br>
-        <img src="assets/A2.png" alt="Main Image" width="300">
+
+        <img src="assets/image/A2.png" alt="Main Image" width="300">
+        <div>
+        </div>
+       <section>
+
+       </section>
     </section>
     <section>
         <nav>
             <ul>
                 <a href="https://www.facebook.com/kavindunimesh.hettiarchchi" target="_blank">
-                    <img src="assets/faceBook.png" alt="FaceBook" width="20">
+                    <img src="assets/image/faceBook.png" alt="FaceBook" width="20">
                 </a>
                 <a href="https://www.linkedin.com/in/kavindu-nimesh-05810023a/" target="_blank">
-                    <img src="assets/linkedin.png" alt="Linkedin" width="20">
+                    <img src="assets/image/linkedin.png" alt="Linkedin" width="20">
                 </a>
                 <a href="https://www.instagram.com/mr__kavii/" target="_blank">
-                    <img src="assets/instagram.png" alt="Instagram" width="20">
+                    <img src="assets/image/instagram.png" alt="Instagram" width="20">
                 </a>
 
             </ul>
@@ -139,10 +353,10 @@
         </section>
 
     <section>
-        <h2><dfn id="about">About</dfn></h2>
+        <h2><dfn id="about">About Me</dfn></h2>
         <article>
             <div>
-                <img src="assets/A3.png" alt="About Image" width="300">
+                <img src="assets/image/A3.png" alt="About Image" width="300">
             </div>
             <pr>
                 My name is Kavindu, 21, still an undergrad, looking for an Internship. I’m skilled with Java, Mysql,
@@ -156,9 +370,20 @@
 
     <section>
         <h2><dfn id="skill">Skill</dfn></h2>
-        <img src="assets/java.png" alt="Java" width="100" usemap="#javaMap" style="border: 1px solid red">
+       <!--
         <img src="" alt="">
-        <img src="" alt="">
+        <img src="" alt="">-->
+        <section>
+            <div><img src="assets/image/java.png" alt="Java"></div>
+            <div><img src="assets/image/JavaScript.png"alt="javaScript"></div>
+            <div><img src="assets/image/css.png"alt="css"></div>
+            <div><img src="assets/image/html-5.png"alt="html"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
 
         <map name="javaMap">
             <area shape="circle" target="_blank" href="https://www.facebook.com/kavindunimesh.hettiarchchi"
@@ -201,7 +426,7 @@
                 <abbr title="Institute of Java for Software Engineering">IJSE </abbr>
             </pr>
 
-            <img src="assets/A4.png" alt="Photo" width="300">
+            <img src="assets/image/A4.png" alt="Photo" width="300">
 
         </article>
 
@@ -212,7 +437,7 @@
         <ul>
             <li>
                 <a href="https://www.facebook.com/kavindunimesh.hettiarchchi" target="_blank">
-                    <img src="assets/faceBook.png" alt="FaceBook" width="20">
+                    <img src="assets/image/faceBook.png" alt="FaceBook" width="20">
 
                     Kavindu Nimesh Hettiarachchi
                 </a>
@@ -220,7 +445,7 @@
             <br>
             <li>
                 <a href="https://www.instagram.com/mr__kavii/" target="_blank">
-                    <img src="assets/instagram.png" alt="Instagram" width="20">
+                    <img src="assets/image/instagram.png" alt="Instagram" width="20">
 
                     Kavindu Nimesh
                 </a>
@@ -228,7 +453,7 @@
             <br>
             <li>
                 <a href="https://www.linkedin.com/in/kavindu-nimesh-05810023a/" target="_blank">
-                    <img src="assets/linkedin.png" alt="Linkedin" width="20">
+                    <img src="assets/image/linkedin.png" alt="Linkedin" width="20">
 
                     Kavindu Nimesh
                 </a>
