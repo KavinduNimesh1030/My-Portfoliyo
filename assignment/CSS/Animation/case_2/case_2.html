@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animations | IJSE</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/img/fav.png" rel="icon">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            border: 2px solid red;
+            animation-name: my-animation; /* key frame name*/
+            animation-duration: 2s; /* Time for complete one round*/
+            animation-delay: 1s; /*wait 2s and run*/
+           
+            animation-direction:normal; /*Can manage the direction*/
+            animation-fill-mode: both; /* what frame should apply to the element at the end*/
+            animation-timing-function: linear; /*how to manage the time */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes my-animation {
+            0% {
+                width: 50px;
+                height: 50px;
+                opacity: 100%;
+
+            }
+            50% {
+               width: 100px;
+                height: 100px;
+                opacity: 60%;
+            }
+            100% {
+                width: 150px;
+                height: 150px;
+                opacity: 0%;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div>
+
+</div>
+
+</body>
+</html>
