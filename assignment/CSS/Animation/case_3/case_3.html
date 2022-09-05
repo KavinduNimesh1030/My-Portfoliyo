@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animations | IJSE</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/img/fav.png" rel="icon">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <!--
+    What are animation.?
+    Animation is a CSS property which we can use to animate different CSS rules by giving a durations
+    and iteration count using keyframes
+
+    Animations have two components
+    01. KeyFrames
+    02. CSS rules
+    -->
+    <style>
+        main{
+            width: 800px;
+            height: 400px;
+            border: 2px solid black;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            overflow: hidden;
+
+            /*animation-play-state: paused;*/
+        }
+        main>section{
+            position: absolute;
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation-name: my-animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+        main>section>div{
+            width: 100%;
+        }
+        main>section>div:first-child{
+            background: url("assest/4.jpg");
+            background-size: cover;
+
+        }
+        main>section>div:nth-child(2){
+            background: url("assest/5.jpg");
+            background-size: cover;
+
+        }
+        main>section>div:nth-child(3){
+            background: url("assest/6.jpg");
+            background-size: cover;
+
+        }
+        main>section>div:nth-child(4){
+            background: url("assest/7.jpg");
+            background-size: cover;
+
+        }
+
+
+        @keyframes my-animation {
+            0%,15%{
+                left: 0;
+                right: 0;
+            }
+            25%,40%{
+               left: -800px;
+
+            }
+            50%,70%{
+                left: -1600px;
+            }
+            100%{
+                left: -2400px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>
