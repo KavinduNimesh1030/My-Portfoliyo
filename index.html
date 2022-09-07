@@ -12,7 +12,6 @@
 
     <title>Title</title>
     <style>
-
         main {
             position: relative;
         }
@@ -47,13 +46,75 @@
             color: blue;
         }
 
-        main > section:first-child > img {
+        main > section:first-child > img#mainImg {
             position: absolute;
             right: 20px;
-            top: -135px;
+            top: -144px;
             margin-top: 0;
             width: 411px;
             z-index: 1;
+            /*   position: absolute;
+               right: 83px;
+               top: -72px;
+               margin-top: 0;
+               width: 278px;
+               z-index: 1;*/
+        }
+        main > section:first-child >img#arrow{
+            position: absolute;
+            right: 343px;
+            top: 156px;
+            margin-top: 0;
+            width: 109px;
+            z-index: 1;
+        }
+        main > section:first-child >div#project{
+            position: absolute;
+            right: 426px;
+            top: 253px;
+            margin-top: 0;
+            width: 128px;
+            height: 71px;
+            border-radius: 14px;
+            background-color: #e1e1e3;
+        }
+        main > section:first-child >div#project>img#heart{
+            position: relative;
+            left: 7px;
+            width: 20px;
+            height: 20px;
+            top: 7px;
+        }
+        main > section:first-child >div#project>a{
+            position: relative;
+            left: 50px;
+            width: 23px;
+            height: 23px;
+            top: -65px;
+            cursor: pointer;
+        }
+        main > section:first-child >div#project>a>img#arrowHead{
+            position: relative;
+            left: 5px;
+            width: 23px;
+            height: 23px;
+            top: 9px;
+            cursor: pointer;
+        }
+        main > section:first-child >div#project>h1#title{
+            position: relative;
+            left: 30px;
+            top: -27px;
+            font-size: 17px;
+            font-family: 'Glory', sans-serif;
+        }
+        main > section:first-child >div#project>h1#pCount{
+            position: relative;
+            left: 24px;
+            top: -40px;
+            font-size: 24px;
+            font-family: 'Glory', sans-serif;
+            color: #001e80;
         }
 
         main > section:nth-child(2) {
@@ -167,7 +228,7 @@
 
         }
 
-        main > section:first-child > div {
+        main > section:first-child > div#background {
             right: 79px;
             top: -40px;
             position: absolute;
@@ -1134,10 +1195,10 @@
                 background-color: #ffd651;
             }90%,100% {
 
-                top: 280px;
-                background-color: #ffd651;
+                 top: 280px;
+                 background-color: #ffd651;
 
-            }
+             }
 
         }
 
@@ -1160,7 +1221,7 @@
                 bottom: 210px;
                 background-color: #ffd651;
             }90% ,100% {
-                             bottom: 280px;
+                 bottom: 280px;
                  background-color: #ffd651;
 
              }
@@ -1259,7 +1320,6 @@
             position: absolute;
         }
 
-
     </style>
 </head>
 <body>
@@ -1284,8 +1344,18 @@
 
         <Button id="HireButton">Hire Me</Button>
 
-        <img alt="Main Image" src="assets/image/A2.png" width="300">
-        <div>
+        <img id="mainImg" alt="Main Image" src="assets/image/A01.png" width="300">
+        <img id="arrow" alt="arrow" src="assets/image/spline.png" width="300">
+        <div id="background">
+        </div>
+        <div id="project">
+            <img id="heart" src="assets/image/hart.jpg" alt="hart">
+            <h1 id="title">Great Project</h1>
+            <h1 id="pCount">12+Done</h1>
+            <a href="https://github.com/KavinduNimesh1030" target="_blank">
+                <img id="arrowHead" src="assets/image/play.png" alt="hart">
+            </a>
+
         </div>
         <section>
 
