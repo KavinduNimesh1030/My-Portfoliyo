@@ -68,6 +68,15 @@
             width: 109px;
             z-index: 1;
         }
+        main > section:first-child >img#arrow2{
+            position: absolute;
+            right: 312px;
+            top: -52px;
+            margin-top: 0;
+            width: 109px;
+            z-index: 1;
+            transform: rotate(302deg);
+        }
         main > section:first-child >div#project{
             position: absolute;
             right: 426px;
@@ -115,6 +124,82 @@
             font-size: 24px;
             font-family: 'Glory', sans-serif;
             color: #001e80;
+        }
+        main > section:first-child >div#circle{
+            width: 116px;
+            height: 116px;
+            border-radius: 100px;
+            position: absolute;
+            left: 375px;
+            top: 73px;
+            background-image: linear-gradient(#001e80, #7ac6f7);
+            z-index: -1;
+        }
+        main > section:first-child >div#proposition{
+            position: absolute;
+            right: 377px;
+            top: 14px;
+            margin-top: 0;
+            width: 171px;
+            height: 40px;
+            border-radius: 14px;
+            background-color: #e1e1e3;
+            /* z-index: -1; */
+            z-index: 3;
+        }
+        main > section:first-child >div#proposition>img{
+            position: relative;
+            left: 5px;
+            width: 23px;
+            height: 23px;
+            top: 8px;
+            bottom: 0;
+            cursor: pointer;
+        }
+        main > section:first-child >div#proposition>h1{
+            position: relative;
+            left: 33px;
+            top: -27px;
+            font-size: 17px;
+            font-family: 'Glory', sans-serif;
+        }
+        #website{
+            position: absolute;
+            left: 100px;
+            top: 475px;
+            margin-top: 0;
+            width: 185px;
+            height: 30px;
+            border-radius: 14px;
+            background-color: #e1e1e3;
+            z-index: 2;
+
+        }
+       #website>div{
+            left: 4px;
+            top: 2px;
+            border: 1px solid black;
+            width: 23px;
+            height: 23px;
+            background: url(assets/image/web.JPG);
+            background-size: cover;
+            border-radius: 100px;
+            /* left: 30px; */
+            /* padding-left: 10px; */
+            position: relative;
+
+
+        }
+        #website>a{
+            position: absolute;
+            top: -10px;
+            left: 35px;
+            text-decoration: none;
+        }
+       #website>a>h1{
+            font-size: 20px;
+            font-family: 'Glory', sans-serif;
+            color: #0a30af
         }
 
         main > section:nth-child(2) {
@@ -184,6 +269,7 @@
             position: absolute;
             margin-right: 0;
             padding: 0;
+            z-index: 3;
 
         }
 
@@ -215,7 +301,7 @@
 
         #HireButton {
             color: white;
-            background-color: blue;
+            background-color: #001e80;
             left: 105px;
             top: 326px;
             position: absolute;
@@ -236,6 +322,7 @@
             width: 288px;
             height: 513px;
             background-color: #001e80;
+            background-image: linear-gradient(#6779ff,#001e80);
             border-bottom-right-radius: 164px;
             border-top-left-radius: 164px
         }
@@ -1319,6 +1406,11 @@
             height: 380px;
             position: absolute;
         }
+        main > section:nth-child(2) > nav > ul > a:nth-child(3)>img{
+            width: 40px;
+            height: 40px;
+        }
+
 
     </style>
 </head>
@@ -1346,6 +1438,8 @@
 
         <img id="mainImg" alt="Main Image" src="assets/image/A01.png" width="300">
         <img id="arrow" alt="arrow" src="assets/image/spline.png" width="300">
+        <img id="arrow2" alt="arrow" src="assets/image/arrow3.png" width="300">
+
         <div id="background">
         </div>
         <div id="project">
@@ -1355,23 +1449,35 @@
             <a href="https://github.com/KavinduNimesh1030" target="_blank">
                 <img id="arrowHead" src="assets/image/play.png" alt="hart">
             </a>
-
         </div>
         <section>
 
         </section>
+        <div id="circle"></div>
+        <div id="proposition">
+            <img src="assets/image/developer.jpg" alt="hart">
+            <h1>Fullstack Developer</h1>
+        </div>
+        <div id="website">
+            <div>
+            </div>
+            <a href="http://kavindunimeshbiolinks.epizy.com/" target="_blank">
+                <h1>@kavindunimesh</h1>
+            </a>
+
+        </div>
     </section>
     <section>
         <nav>
             <ul>
                 <a href="https://www.facebook.com/kavindunimesh.hettiarchchi" target="_blank">
-                    <img alt="FaceBook" src="assets/image/faceBook.png" width="20">
+                    <img alt="FaceBook" src="assets/image/faceBook.png" >
                 </a>
                 <a href="https://www.linkedin.com/in/kavindu-nimesh-05810023a/" target="_blank">
-                    <img alt="Linkedin" src="assets/image/linkedin.png" width="20">
+                    <img alt="Linkedin" src="assets/image/linkedin.png">
                 </a>
                 <a href="https://www.instagram.com/mr__kavii/" target="_blank">
-                    <img alt="Instagram" src="assets/image/instagram.png" width="20">
+                    <img alt="Instagram" src="assets/image/instagram%20(1).png">
                 </a>
 
             </ul>
@@ -1469,20 +1575,20 @@
 
             <div></div>
 
-            <h3>2017 - 2019</h3>
+            <h3>2017 - 2018</h3>
+            <h1>Web Design</h1>
+            <h2>Divisional Computer Resource Center</h2>
+
+
+            <div></div>
+
+            <h3>2018 - 2020</h3>
             <h1>Advanced level</h1>
             <h2>Sripalee Collage Horana</h2>
 
-
             <div></div>
 
-            <h3>2017 - 2019</h3>
-            <h1>web Design</h1>
-            <h2>Divisional Computer Resource Center</h2>
-
-            <div></div>
-
-            <h3>2017 - Present</h3>
+            <h3>2021 - Present</h3>
             <h1>Software Engineering</h1>
             <h2>IJSE/Institute of Java for Software Engineering</h2>
 
@@ -1521,7 +1627,7 @@
 
             <li>
                 <a href="https://www.instagram.com/mr__kavii/" target="_blank">
-                    <img alt="Instagram" src="assets/image/instagram.png" width="20">
+                    <img alt="Instagram" src="assets/image/instagram%20(1).png" width="20">
 
                     Kavindu Nimesh
                 </a>
