@@ -1465,7 +1465,7 @@
 
        /* Responsive Mobile*/
 
-        @media all and (min-width: 310px) and (max-width: 425px) {
+        @media all and (min-width: 320px) and (max-width: 425px) {
 
             header > nav > ol {
                 width: 100%;
@@ -2225,9 +2225,14 @@
 
            /* test*/
             main{
+                margin:0 auto;
                 white-space: revert;
                 width: 100%;
                 overflow: hidden;
+            }
+            .main_wrap .row{
+                margin-left:0px;
+                margin-right:0px;
             }
             main > section:nth-child(3) > article {
                 all: unset;
@@ -2290,8 +2295,188 @@
                 margin: auto;
                 margin-right: 0;
             }
+            main > section:first-child > div#project {
+                right: 30%;
+                top: 229px;
+                width: 93px;
+                height: 44px;
+                display: none;
+            }
+            main > section:first-child > div#project > img#heart {
+                left: 7px;
+                width: 10px;
+                height: 10px;
+                top: 3px;
+            }
+            main > section:first-child > div#project > h1#title {
+                position: relative;
+                left: 21px;
+                top: -22px;
+                font-size: 13px;
+            }
+            main > section:first-child > div#project > h1#pCount {
+                left: 19px;
+                top: -39px;
+                font-size: 19px;
+            }
+            main > section:first-child > div#project > a {
+                position: relative;
+                left: 50px;
+                top: -62px;
+                cursor: pointer;
+            }
+            main > section:first-child > div#project > a > img#arrowHead {
+                position: relative;
+                left: 5px;
+                width: 15px;
+                height: 16px;
+                top: 9px;
+                cursor: pointer;
+                display: none;
+            }
+            main > section:first-child > img#arrow {
+                position: absolute;
+                right: 35%;
+                top: 173px;
+                margin-top: 0;
+                width: 61px;
+                z-index: 1;
+                display: none;
+            }
+            main > section:nth-child(3) > article {
+                all: unset;
+                position: absolute;
+                padding-top: 1035px;
+                /* width: 289px; */
+                /* padding-left: 254px; */
+                height: 86px;
+                width: 16%;
+                height: 20%;
+                /* align-items: center; */
+                padding-left: 84%;
+            }
+            #prBG {
+                display: block;
+                width: 97%;
+                height: 218px;
+                background-color: grey;
+                transform: translateY(153px);
+                z-index: 1;
+                opacity: 50%;
+                border-radius: 30px;
+                left: 4px;
+            }
+            main > section:nth-child(3) > article > pr {
+
+                width: 95%;
+                /* width: 253px; */
+            }
 
 
+        }
+        @media all and (min-width: 375px) and (max-width: 425px) {
+            main >section:first-child>img#mainImg {
+                right: 1px;
+                top: -22px;
+                margin-top: 12px;
+                width: 161px;
+            }
+            main > section:first-child > div#background {
+                right: 22px;
+                top: 43px;
+                position: absolute;
+                margin-top: 0;
+                width: 118px;
+                height: 189px;
+                border-bottom-right-radius: 64px;
+                border-top-left-radius: 70px;
+                z-index: -1;
+            }
+            main > section:first-child > h1 {
+                top: 72px;
+                padding-left: 24px;
+                width: 200px;
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+            main > section:first-child > h1:nth-child(2) {
+                margin-top: -20px;
+                padding-left: 25px;
+            }
+            main > section:first-child > h2 {
+                top: 44px;
+                padding-left: 25px;
+                width: 250px;
+                font-size: 13px;
+            }
+                #HireButton {
+                    left: 26px;
+                    top: 40px;
+                    position: relative;
+                    width: 81px;
+                    height: 21px;
+                    font-size: 11px;
+                    border-radius: 4px;
+                }
+            main > section:nth-child(2) > nav {
+                all: revert;
+                transform: translateY(10px);
+                transform: translateX(16px);
+            }
+            main > section:nth-child(3) > article {
+                all: unset;
+                position: absolute;
+                padding-top: 1035px;
+                /* width: 289px; */
+                /* padding-left: 254px; */
+                height: 86px;
+                width: 16%;
+                height: 20%;
+                /* align-items: center; */
+                padding-left: 84%;
+            }
+            main > section:nth-child(3) > article > pr {
+
+                top: 62px;
+                /* width: 253px; */
+            }
+            @media all and (min-width: 410px) and (max-width: 425px) {
+                main > section:nth-child(5) > section:nth-child(2) > div {
+                    height: 280px;
+                    width: 280px;
+                    background-color: white;
+                    margin: 0;
+                    padding: 0;
+                }
+                main > section:nth-child(5) > section:nth-child(2) > div:nth-child(2){
+                    height: 280px;
+                    width: 280px;
+                    background-color: white;
+                    margin: 0;
+                    padding: 0;
+                }
+                main > section:nth-child(5) > h2 {
+                    font-size: 15px;
+                    color: white;
+                    text-align: center;
+                    top: -676px;
+                    padding-left: 0;
+                }
+                main > section:nth-child(5) > h3 {
+                    font-size: 15px;
+                    color: white;
+                    position: relative;
+                    text-align: center;
+                    top: -370px;
+                    padding-left: 0;
+                }
+                main > section:nth-child(5) {
+                    position: relative;
+                    top: -236px;
+                    height: 1156px;
+                    background-color: #001e80;
+                }
+            }
 
 
         }
