@@ -10,14 +10,14 @@
     .bg{
       display: flex;
       flex-direction: column;
-      transform: translate(5%, 92px);
+      transform: translate(5%, 53px);
       gap: 20px;
 
     }
     .mainBg{
       width: 90%;
       height: 550px;
-      background-color: #cbcaca;
+      background-color: #e3e1e1;
       position: relative;
       top: 31px;
       left: 0;
@@ -33,6 +33,10 @@
       background-color: white;
       width: 50%;
       flex-shrink: 1;
+      border-radius: 10px;
+    }
+    #addCustomer{
+      transform: translateX(448px);
     }
   </style>
 
@@ -57,6 +61,56 @@
 </hader>
 <body>
 <section class="mainBg">
+  <nav class="navbar navbar-expand-lg bg-success">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">Customer Form</a>
+    <button class="btn btn-primary" id="addCustomer" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+      Add+
+    </button>
+    <button class="btn btn-warning">View</button>
+  </div>
+  </nav>
+  <!-- Modal -->
+  <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
+          <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+          <section>
+            <div class="mb-3">
+              <label class="form-label" for="formFile">Customer ID</label>
+              <input class="form-control" id="formFile" type="text">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="formFileMultiple">Customer Name</label>
+              <input class="form-control" id="formFileMultiple" multiple type="text">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="formFileDisabled">Customer Address</label>
+              <input class="form-control" id="formFileDisabled" type="text">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="formFileSm">Customer Salary</label>
+              <input class="form-control form-control-sm" id="formFileSm" type="number">
+            </div>
+
+            <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+              <button class="btn btn-danger" type="button">Customer Delete</button>
+              <button class="btn btn-warning" type="button">Update</button>
+              <button class="btn btn-success" type="button">Save</button>
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+          <button class="btn btn-primary" type="button">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="bg">
 
@@ -79,39 +133,40 @@
     </div>
 
     <div class="tableBg">
-      <table class="table table-striped table-hover">
-        <thead>
+      <table class="table table-bordered table-hover table-striped">
+        <thead class="bg-success bg-opacity-50 text-black">
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th>Customer ID</th>
+          <th>Customer Name</th>
+          <th>Customer Address</th>
+          <th>Customer Salary</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-        </tbody>
+        <tbdoy>
+          <tr>
+            <td>C001</td>
+            <td>Dasun</td>
+            <td>Galle</td>
+            <td>100000</td>
+          </tr>
+          <tr>
+            <td>C002</td>
+            <td>Dasun</td>
+            <td>Galle</td>
+            <td>100000</td>
+          </tr>
+          <tr>
+            <td>C002</td>
+            <td>Dasun</td>
+            <td>Galle</td>
+            <td>100000</td>
+          </tr>
+        </tbdoy>
       </table>
     </div>
 
   </section>
 </section>
-
+<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
