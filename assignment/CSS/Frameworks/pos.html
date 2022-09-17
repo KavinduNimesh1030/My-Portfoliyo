@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pos system</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--link Bootstrap Framework-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        main{
+            overflow: hidden;
+        }
+        #mainSec{
+            height: 400px;
+            display: flex;
+            /*flex-direction: row; !*row (default) / column / row-reverse / column-reverse *!*/
+            align-items:flex-start; /* Flex Container Y axis*/ /* flex-start (Default) / center / flex-end*/ /*(Cross Axis )*/
+
+            height: 91vh;
+        }
+        #mainSec > div:first-child {
+            height: 600px;
+            width: 50%;
+            flex-shrink: 1;
+
+        }
+        #mainSec > div:nth-child(2){
+            height: 600px;
+            width: 50%;
+            flex-shrink: 1;
+        }
+        .col-xl-7 {
+            flex: 0 0 auto;
+            width: 58.33333333%;
+            /* padding-left: 185px; */
+            transform: translate(36%, 230px);
+            /* transform: translatey(192px); */
+        }
+        .img-fluid {
+            max-width: 100%;
+            /* height: auto; */
+            height: 100%;
+        }
+        button:not(:disabled) {
+            cursor: pointer;
+            transform: translate(710%, 236px);
+        }
+
+
+    </style>
+</head>
+<body>
+<main>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/bg.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+           Pos System
+        </a>
+    </div>
+</nav>
+
+
+<section id="mainSec" class="row">
+    <div>
+        <div class="col-12 col-sm-10 col-md-10 col-lg-7 col-xl-7">
+            <label for="floatingInput">Email address</label>
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        </div>
+        <div class="col-12 col-sm-10 col-md-10 col-lg-7 col-xl-7">
+            <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+
+        </div>
+        <button class="btn btn-info">Login</button>
+    </div>
+    <div>
+        <img src="assets/img/5145.jpg" class="img-fluid" alt="...">
+    </div>
+
+</section>
+
+<script src="assets/js/bootstrap.min.js"></script>
+</main>
+</body>
+</html>
