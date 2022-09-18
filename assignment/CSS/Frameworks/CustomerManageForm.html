@@ -38,6 +38,11 @@
     #addCustomer{
       transform: translateX(448px);
     }
+    .select {
+      transform: translate(100px, -53px);
+      position: absolute;
+      width: 223px;
+    }
   </style>
 
 </head>
@@ -125,6 +130,14 @@
         <option value="Chicago">
       </datalist>
       <button class="btn btn-success mt-3 mb-3 ms-3">Search</button>
+      <div class="select">
+        <select class="form-select w-50" aria-label="Default select example">
+          <option selected></option>
+          <option value="1">Name</option>
+          <option value="2">Id</option>
+          <option value="3">salary</option>
+        </select>
+      </div>
     </div>
     <div class="">
       <button class="btn btn-danger">Delete</button>
