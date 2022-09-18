@@ -38,10 +38,149 @@
         #addCustomer{
             transform: translateX(448px);
         }
+        .select {
+            transform: translate(100px, -53px);
+            position: absolute;
+            width: 223px;
+        }
+
     </style>
 
 </head>
+<hader>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ureaha Pos System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Order</a>
+                    <a class="nav-link" href="#">Customer</a>
+                    <a class="nav-link disabled">Item</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</hader>
 <body>
+<section class="mainBg">
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Item Form</a>
+            <button class="btn btn-primary" id="addCustomer" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+                Add+
+            </button>
+            <button class="btn btn-warning">View</button>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFile">Customer ID</label>
+                            <input class="form-control" id="formFile" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileMultiple">Customer Name</label>
+                            <input class="form-control" id="formFileMultiple" multiple type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileDisabled">Customer Address</label>
+                            <input class="form-control" id="formFileDisabled" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileSm">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="formFileSm" type="number">
+                        </div>
 
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-danger" type="button">Customer Delete</button>
+                            <button class="btn btn-warning" type="button">Update</button>
+                            <button class="btn btn-success" type="button">Save</button>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                    <button class="btn btn-primary" type="button">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg">
+
+        <div class="searchBg">
+            <label for="exampleDataList" class="form-label ms-3 mt-2">Item Search</label>
+            <input class="form-control mt-2 ms-3 w-75" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Chicago">
+            </datalist>
+            <button class="btn btn-success mt-3 mb-3 ms-3">Search</button>
+            <div class="select">
+                <select class="form-select w-50" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">Name</option>
+                    <option value="2">Id</option>
+                    <option value="3">salary</option>
+                </select>
+            </div>
+        </div>
+        <div class="">
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-primary">Detail</button>
+            <button class="btn btn-success">Clear</button>
+        </div>
+
+        <div class="tableBg">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="bg-success bg-opacity-50 text-black">
+                <tr>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>quantity</th>
+                    <th>Item Price</th>
+                </tr>
+                </thead>
+                <tbdoy>
+                    <tr>
+                        <td>I001</td>
+                        <td>Milk Powder</td>
+                        <td>100</td>
+                        <td>1000.00</td>
+                    </tr>
+                    <tr>
+                        <td>I001</td>
+                        <td>Milk Powder</td>
+                        <td>100</td>
+                        <td>1000.00</td>
+                    </tr>
+                    <tr>
+                        <td>I001</td>
+                        <td>Milk Powder</td>
+                        <td>100</td>
+                        <td>1000.00</td>
+                    </tr>
+                </tbdoy>
+            </table>
+        </div>
+
+    </section>
+</section>
+<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
