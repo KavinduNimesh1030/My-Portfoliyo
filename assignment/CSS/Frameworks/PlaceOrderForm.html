@@ -67,7 +67,7 @@
 <section class="mainBg">
     <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Customer Form</a>
+            <a class="navbar-brand" href="#">Place Order</a>
             <button class="btn btn-primary" id="addCustomer" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
                 Add+
             </button>
@@ -127,8 +127,52 @@
                 </li>
             </ul>
         </div>
-        <div class="itemSelectBg">
 
+       <!--Item Select------------------------------------------------------------------------>
+        <div class="card" style="width: 25rem;">
+            <div class="card-header bg-info text-white">
+                Item Select
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item h-auto">
+                    <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Item</label>
+                        <select class="form-select " aria-label="Default select example" style="height:28px">
+                            <option selected></option>
+                            <option value="1">Code</option>
+                            <option value="2">Name</option>
+                            <option value="3">Price</option>
+                        </select>
+                    </div>
+                    <div class="form-check form-check-inline col-6 me-2 ps-5">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Item Code</label>
+                        <input class="form-control"  type="text" style="height:27px">
+                    </div>
+
+                </li>
+
+                <li class="list-group-item">
+                    <div class="form-check form-check-inline ps-0 col-4">
+                        <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Item Name</label>
+                        <input class="form-control mb-2"  type="text"  style="height:27px">
+                    </div>
+                    <div class="form-check form-check-inline ps-0 col-3 ">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Price</label>
+                        <input class="form-control" type="text" style="height:27px">
+                    </div>
+                    <div class="form-check form-check-inline ps-0 col-3">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">QtyOnH</label>
+                        <input class="form-control" type="text" style="height:27px">
+                    </div>
+
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check col-12 me-0 ps-2 mt-0">
+                        <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Order Quantity</label>
+                        <input class="form-control mb-2"type="text"  style="height:27px">
+                    </div>
+                </li>
+            </ul>
         </div>
 
        <!-- <div class="tableBg">
