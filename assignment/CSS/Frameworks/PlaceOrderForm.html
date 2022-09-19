@@ -9,13 +9,13 @@
         .bg{
             display: flex;
             /*flex-direction: row;*/
-            transform: translate(5%, 53px);
+            transform: translate(5%, 32px);
             gap: 20px;
 
         }
         .mainBg{
             width: 90%;
-            height: 550px;
+            height: 597px;
             background-color: #e3e1e1;
             position: relative;
             top: 31px;
@@ -68,14 +68,12 @@
     <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Place Order</a>
-            <button class="btn btn-primary" id="addCustomer" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
-                Add+
-            </button>
-            <button class="btn btn-warning">View</button>
         </div>
     </nav>
 
     <section class="bg">
+
+        <!--Invoice details---------------------------------------------------------------->
 
         <div class="card" style="width: 25rem;">
             <div class="card-header bg-info text-white">
@@ -253,9 +251,34 @@
                     </li>
                 </ul>
             </div>
+        <!--Table-------------------------------------------------------------------------->
 
 
     </section>
+
+    <table class="table table-bordered table-hover table-striped mt-5 ms-5"style="transform: translateX(27px);width: 90%">
+        <thead class="bg-success bg-opacity-50 text-black">
+        <tr class="w-50">
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>quantity</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbdoy>
+            <tr>
+                <td>I001</td>
+                <td>Milk Powder</td>
+                <td>1000.00</td>
+                <td>2</td>
+                <td>2000.00</td>
+            </tr>
+
+        </tbdoy>
+    </table>
+
+
 </section>
 <script src="assets/js/bootstrap.min.js"></script>
 
