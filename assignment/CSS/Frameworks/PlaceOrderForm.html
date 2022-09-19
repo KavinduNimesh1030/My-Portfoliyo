@@ -2,9 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Place Order form</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bg{
+            display: flex;
+            /*flex-direction: row;*/
+            transform: translate(5%, 53px);
+            gap: 20px;
+
+        }
+        .mainBg{
+            width: 90%;
+            height: 550px;
+            background-color: #e3e1e1;
+            position: relative;
+            top: 31px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .tableBg{
+            background-color: white;
+            width: 90%;
+
+        }
+        .itemDetailBg{
+            background-color: white;
+            /*width: 50%;*/
+            width: 30%;
+            height: 300px;
+            flex-shrink: 1;
+            border-radius: 10px;
+        }
+        .itemSelectBg{
+            background-color: white;
+            /*width: 50%;*/
+            width: 30%;
+            flex-shrink: 1;
+            border-radius: 10px;
+        }
+        /*.card{
+            background-color: white;
+            !*width: 50%;*!
+            width: 30%;
+            flex-shrink: 1;
+            border-radius: 10px;
+        }*/
+        #addCustomer{
+            transform: translateX(448px);
+        }
+        .select {
+            transform: translate(100px, -53px);
+            position: absolute;
+            width: 223px;
+        }
+
+    </style>
+
+
 </head>
 <body>
+<section class="mainBg">
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Customer Form</a>
+            <button class="btn btn-primary" id="addCustomer" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+                Add+
+            </button>
+            <button class="btn btn-warning">View</button>
+        </div>
+    </nav>
+
+    <section class="bg">
+
+        <div class="card" style="width: 25rem;">
+            <div class="card-header bg-info text-white">
+                Invoice Details
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item h-auto">
+                    <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
+                        <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Order ID</label>
+                        <input class="form-control mb-2" id="formFile" type="text"  style="height:27px">
+                       </div>
+                    <div class="form-check form-check-inline col-6 me-2 ps-5">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Date</label>
+                        <input class="form-control" id="formFile2" type="text" style="height:27px">
+                    </div>
+
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">customer</label>
+                        <select class="form-select " aria-label="Default select example" style="height:28px">
+                            <option selected></option>
+                            <option value="1">Code</option>
+                            <option value="2">Name</option>
+                            <option value="3">Price</option>
+                        </select>
+                    </div>
+                    <div class="form-check form-check-inline col-6 me-2 ps-5 mt-0">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">customer Id</label>
+                        <input class="form-control" id="formFile4" type="text" style="height:27px">
+                    </div>
+
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
+                        <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Name</label>
+                        <input class="form-control mb-2" id="formFil5" type="text"  style="height:27px">
+                    </div>
+                    <div class="form-check form-check-inline col-6 me-2 ps-5">
+                        <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Salary</label>
+                        <input class="form-control" id="formFile6" type="text" style="height:27px">
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="form-check col-12 me-0 ps-2 mt-0">
+                        <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Address</label>
+                        <input class="form-control mb-2" id="formFil7" type="text"  style="height:27px">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="itemSelectBg">
+
+        </div>
+
+       <!-- <div class="tableBg">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="bg-success bg-opacity-50 text-black">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Customer Salary</th>
+                </tr>
+                </thead>
+                <tbdoy>
+                    <tr>
+                        <td>C001</td>
+                        <td>Dasun</td>
+                        <td>Galle</td>
+                        <td>100000</td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Dasun</td>
+                        <td>Galle</td>
+                        <td>100000</td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Dasun</td>
+                        <td>Galle</td>
+                        <td>100000</td>
+                    </tr>
+                </tbdoy>
+            </table>
+        </div>-->
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Featured
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+
+
+    </section>
+</section>
+<script src="assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>
