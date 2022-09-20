@@ -6,14 +6,14 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .bg{
+        .bgInPlaceOrder{
             display: flex;
             /*flex-direction: row;*/
             transform: translate(5%, 32px);
             gap: 20px;
 
         }
-        .mainBg{
+        .mainBgInPlaceOrder {
             width: 90%;
             height: 597px;
             background-color: #e3e1e1;
@@ -23,55 +23,22 @@
             right: 0;
             margin: auto;
         }
-        .tableBg{
-            background-color: white;
-            width: 90%;
 
-        }
-        .itemDetailBg{
-            background-color: white;
-            /*width: 50%;*/
-            width: 30%;
-            height: 300px;
-            flex-shrink: 1;
-            border-radius: 10px;
-        }
-        .itemSelectBg{
-            background-color: white;
-            /*width: 50%;*/
-            width: 30%;
-            flex-shrink: 1;
-            border-radius: 10px;
-        }
-        /*.card{
-            background-color: white;
-            !*width: 50%;*!
-            width: 30%;
-            flex-shrink: 1;
-            border-radius: 10px;
-        }*/
-        #addCustomer{
-            transform: translateX(448px);
-        }
-        .select {
-            transform: translate(100px, -53px);
-            position: absolute;
-            width: 223px;
-        }
 
     </style>
 
 
 </head>
+<main id="placeOrderMain">
 <body>
-<section class="mainBg">
+<section class="mainBgInPlaceOrder">
     <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Place Order</a>
         </div>
     </nav>
 
-    <section class="bg">
+    <section class="bgInPlaceOrder">
 
         <!--Invoice details---------------------------------------------------------------->
 
@@ -227,11 +194,7 @@
                         </div>
                         <div class="form-check form-check-inline col-5 ps-0 mt-2">
                             <label class="form-label d-inline " for="formFile" style="font-size: 13px">Discount</label>
-                            <select class="form-select " aria-label="Default select example" style="height:28px">
-                                <option selected></option>
-                                <option value="1">10</option>
-                                <option value="2">20</option>
-                                <option value="3">30</option>
+                            <input class="form-control"type="number" style="height:27px">
                             </select>
 
                         </div>
@@ -283,4 +246,5 @@
 <script src="assets/js/bootstrap.min.js"></script>
 
 </body>
+</main>
 </html>

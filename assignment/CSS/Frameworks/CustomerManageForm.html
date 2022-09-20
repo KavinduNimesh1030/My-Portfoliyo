@@ -7,14 +7,14 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    .bg{
+    .bgInCus{
       display: flex;
       flex-direction: column;
       transform: translate(5%, 53px);
       gap: 20px;
 
     }
-    .mainBg{
+    .mainBgInCus{
       width: 90%;
       height: 550px;
       background-color: #e3e1e1;
@@ -24,12 +24,12 @@
       right: 0;
       margin: auto;
     }
-    .tableBg{
+    .tableBgInCus{
       background-color: white;
       width: 90%;
 
     }
-    .searchBg{
+    .searchBgInCus{
       background-color: white;
       width: 50%;
       flex-shrink: 1;
@@ -64,8 +64,9 @@
     </div>
   </nav>
 </hader>
+<main id="customerMain">
 <body>
-<section class="mainBg">
+<section class="mainBgInCus">
   <nav class="navbar navbar-expand-lg bg-success">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">Customer Form</a>
@@ -117,9 +118,9 @@
     </div>
   </div>
 
-  <section class="bg">
+  <section class="bgInCus">
 
-    <div class="searchBg">
+    <div class="searchBgInCus">
       <label for="exampleDataList" class="form-label ms-3 mt-2">Customer Search</label>
       <input class="form-control mt-2 ms-3 w-75" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
       <datalist id="datalistOptions">
@@ -145,7 +146,7 @@
       <button class="btn btn-success">Clear</button>
     </div>
 
-    <div class="tableBg">
+    <div class="tableBgInCus">
       <table class="table table-bordered table-hover table-striped">
         <thead class="bg-success bg-opacity-50 text-black">
         <tr>
@@ -182,4 +183,5 @@
 </section>
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
+</main>
 </html>
