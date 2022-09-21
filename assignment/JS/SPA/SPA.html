@@ -139,7 +139,7 @@
                     <a class="nav-link active" id="Home" aria-current="page" href="#">Home</a>
                     <a class="nav-link"id="order" href="#">Order</a>
                     <a class="nav-link" id="customer" href="#">Customer</a>
-                    <a class="nav-link disabled" id="item">Item</a>
+                    <a class="nav-link" id="item"href="#" >Item</a>
                 </div>
             </div>
         </div>
@@ -670,6 +670,27 @@
         $("#customerMain").show()
         $("#ItemMain").hide()
         $("#placeOrderMain").hide()
+        $("#dashboardMain").hide()
+
+    });
+    $("#item").click(function(){
+        $("#customerMain").hide()
+        $("#ItemMain").show()
+        $("#placeOrderMain").hide()
+        $("#dashboardMain").hide()
+
+    });
+    $("#Home").click(function(){
+        $("#customerMain").hide()
+        $("#ItemMain").hide()
+        $("#placeOrderMain").hide()
+        $("#dashboardMain").show()
+
+    });
+    $("#order").click(function(){
+        $("#customerMain").hide()
+        $("#ItemMain").hide()
+        $("#placeOrderMain").show()
         $("#dashboardMain").hide()
 
     });
