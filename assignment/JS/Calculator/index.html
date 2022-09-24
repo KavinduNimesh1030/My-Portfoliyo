@@ -3,8 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #bg {
+            width: 494px;
+            height: 440px;
+            border: 2px solid black;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: translateY(107px);
+        }
+        #mainSec {
+            width: 449px;
+            height: 337px;
+            margin: auto;
+            display: grid;
+            grid-template-rows: repeat(4, 4fr);
+            grid-template-columns: repeat(4, 4fr);
+            left: 0;
+            right: 0;
+            /* top: 8px; */
+            transform: translate(4px, 66px);
+            bottom: 33px;
+        }
+        #mainSec>div {
+            border: 2px solid black;
+            width: 96px;
+            height: 49px;
+            border-radius: 100px;
+        }
+        #input{
+            width: 329px;
+            height: 44px;
+            transform: translate(24px, 31px);
+            /* margin-bottom: 0; */
+            border-radius: 10px;
+        }
+        #btn{
+            width: 96px;
+            height: 49px;
+            border-radius: 100px;
+            transform: translate(28px, 30px);
+        }
+    </style>
 </head>
 <body>
+<section id="bg">
+    <input type="text"id="input">
+    <button id="btn">A/C</button>
+    <section id="mainSec">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</section>
 
 </body>
 </html>
