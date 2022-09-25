@@ -73,46 +73,46 @@
             <h1 id="h8">8</h1>
         </div>
         <div id="9">
-            <h1>9</h1>
+            <h1 id="h9">9</h1>
         </div>
         <div id="+">
             <h1 id="hPlus">+</h1>
         </div>
         <div id="4">
-            <h1>4</h1>
+            <h1 id="h4">4</h1>
         </div>
         <div id="5">
-            <h1>5</h1>
+            <h1 id="h5">5</h1>
         </div>
         <div id="6">
-            <h1>6</h1>
+            <h1 id="h6">6</h1>
         </div>
         <div id="-">
             <h1 id="hMin">-</h1>
         </div>
         <div id="1">
-            <h1>1</h1>
+            <h1 id="hOne">1</h1>
         </div>
         <div id="2">
-            <h1>2</h1>
+            <h1 id="hTwo">2</h1>
         </div>
         <div id="3">
-            <h1>3</h1>
+            <h1 id="h3">3</h1>
         </div>
         <div id="/">
-            <h1>/</h1>
+            <h1 id="division">/</h1>
         </div>
         <div id="0">
-            <h1>0</h1>
+            <h1 id="h0">0</h1>
         </div>
         <div id=".">
-            <h1>.</h1>
+            <h1 id="point">.</h1>
         </div>
         <div id="=">
             <h1 id="hEQ">=</h1>
         </div>
         <div id="*">
-            <h1>*</h1>
+            <h1 id="mul">*</h1>
         </div>
 
     </section>
@@ -120,6 +120,30 @@
 <script>
     var value =0;
     var cal ;
+
+    $("#hOne").click(function(){
+        $('#input').val($('#input').val() +$("#hOne").text());
+    });
+    $("#hTwo").click(function(){
+        $('#input').val($('#input').val() +$("#hTwo").text());
+
+    });
+    $("#h3").click(function(){
+        $('#input').val($('#input').val() +$("#h3").text());
+
+    });
+    $("#h4").click(function(){
+        $('#input').val($('#input').val() +$("#h4").text());
+
+    });
+    $("#h5").click(function(){
+        $('#input').val($('#input').val() +$("#h5").text());
+
+    });
+    $("#h6").click(function(){
+        $('#input').val($('#input').val() +$("#h6").text());
+
+    });
     $("#h1_7").click(function(){
         $('#input').val($('#input').val() +$("#h1_7").text());
 
@@ -130,6 +154,17 @@
         $('#input').val($('#input').val() +$("#h8").text());
 
     });
+    $("#h9").click(function(){
+        $('#input').val($('#input').val() +$("#h9").text());
+
+    });
+    $("#h0").click(function(){
+        $('#input').val($('#input').val() +$("#h0").text());
+
+    });
+
+
+    /*-----------------------------------------------------------*/
     $("#hPlus").click(function(){
         value =$('#input').val();
         $('#input').val("");
@@ -145,17 +180,22 @@
         if(cal == "+") {
             var tot = parseInt(value) + parseInt($('#input').val());
             $('#input').val(tot);
-            alert(typeof tot);
-            alert(tot)
-        }else {
+        }else if(cal == "-") {
             var tot = parseInt(value) - parseInt($('#input').val());
             $('#input').val(tot);
-            alert(typeof tot);
-            alert(tot)
-        }
+
+        }else if(cal == "*"){
+            var tot = parseInt(value) * parseInt($('#input').val());
+            $('#input').val(tot);
+
+        } else if(cal == "*"){
+        var tot = parseInt(value) / parseInt($('#input').val());
+        $('#input').val(tot);
+    }
     });
     $("#btn").click(function(){
         $('#input').val("");
+        value=0;
     });
 
 </script>
