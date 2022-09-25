@@ -51,11 +51,16 @@
             height: 49px;
             border-radius: 100px;
             transform: translate(28px, 30px);
+            background-color: yellow;
 
         }
         #mainSec>div>h1{
             text-align: center;
             color: black;
+        }
+        #input[type=text] {
+            text-align:right;
+            font-size: 24px;
         }
 
     </style>
@@ -63,7 +68,7 @@
 <body>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <section id="bg">
-    <input placeholder="Input Something" id="input" type="text">
+    <input id="input"type="text">
     <button id="btn">A/C</button>
     <section id="mainSec">
         <div id="7">
@@ -162,6 +167,10 @@
         $('#input').val($('#input').val() +$("#h0").text());
 
     });
+    $("#point").click(function(){
+        $('#input').val($('#input').val() +$("#point").text());
+
+    });
 
 
     /*-----------------------------------------------------------*/
@@ -175,21 +184,32 @@
         $('#input').val("");
         cal = "-";
     });
+    $("#division").click(function(){
+        value =$('#input').val();
+        $('#input').val("");
+        cal = "/";
+    });
+    $("#mul").click(function(){
+        value =$('#input').val();
+        $('#input').val("");
+        cal = "*";
+    });
+    /*--------------------------------------------------------------------------------*/
     $("#hEQ").click(function(){
 
         if(cal == "+") {
-            var tot = parseInt(value) + parseInt($('#input').val());
+            var tot = parseFloat(value) + parseFloat($('#input').val());
             $('#input').val(tot);
         }else if(cal == "-") {
-            var tot = parseInt(value) - parseInt($('#input').val());
+            var tot = parseFloat(value) - parseFloat($('#input').val());
             $('#input').val(tot);
 
         }else if(cal == "*"){
-            var tot = parseInt(value) * parseInt($('#input').val());
+            var tot = parseFloat(value) * parseFloat($('#input').val());
             $('#input').val(tot);
 
-        } else if(cal == "*"){
-        var tot = parseInt(value) / parseInt($('#input').val());
+        } else if(cal == "/"){
+        var tot = parseFloat(value) / parseFloat($('#input').val());
         $('#input').val(tot);
     }
     });
