@@ -61,61 +61,103 @@
     </style>
 </head>
 <body>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
 <section id="bg">
-    <input type="text"id="input">
+    <input placeholder="Input Something" id="input" type="text">
     <button id="btn">A/C</button>
     <section id="mainSec">
-        <div>
-            <h1>7</h1>
+        <div id="7">
+            <h1 id="h1_7">7</h1>
         </div>
-        <div>
-            <h1>8</h1>
+        <div id="8">
+            <h1 id="h8">8</h1>
         </div>
-        <div>
+        <div id="9">
             <h1>9</h1>
         </div>
-        <div>
-            <h1>+</h1>
+        <div id="+">
+            <h1 id="hPlus">+</h1>
         </div>
-        <div>
+        <div id="4">
             <h1>4</h1>
         </div>
-        <div>
+        <div id="5">
             <h1>5</h1>
         </div>
-        <div>
+        <div id="6">
             <h1>6</h1>
         </div>
-        <div>
-            <h1>-</h1>
+        <div id="-">
+            <h1 id="hMin">-</h1>
         </div>
-        <div>
+        <div id="1">
             <h1>1</h1>
         </div>
-        <div>
+        <div id="2">
             <h1>2</h1>
         </div>
-        <div>
+        <div id="3">
             <h1>3</h1>
         </div>
-        <div>
+        <div id="/">
             <h1>/</h1>
         </div>
-        <div>
+        <div id="0">
             <h1>0</h1>
         </div>
-        <div>
+        <div id=".">
             <h1>.</h1>
         </div>
-        <div>
-            <h1>=</h1>
+        <div id="=">
+            <h1 id="hEQ">=</h1>
         </div>
-        <div>
+        <div id="*">
             <h1>*</h1>
         </div>
 
     </section>
 </section>
+<script>
+    var value =0;
+    var cal ;
+    $("#h1_7").click(function(){
+        $('#input').val($('#input').val() +$("#h1_7").text());
 
+    });
+    $("#h8").click(function(){
+
+       /*$('#input').setAttribute($("#h8").text());*/
+        $('#input').val($('#input').val() +$("#h8").text());
+
+    });
+    $("#hPlus").click(function(){
+        value =$('#input').val();
+        $('#input').val("");
+        cal = "+";
+    });
+    $("#hMin").click(function(){
+        value =$('#input').val();
+        $('#input').val("");
+        cal = "-";
+    });
+    $("#hEQ").click(function(){
+
+        if(cal == "+") {
+            var tot = parseInt(value) + parseInt($('#input').val());
+            $('#input').val(tot);
+            alert(typeof tot);
+            alert(tot)
+        }else {
+            var tot = parseInt(value) - parseInt($('#input').val());
+            $('#input').val(tot);
+            alert(typeof tot);
+            alert(tot)
+        }
+    });
+    $("#btn").click(function(){
+        $('#input').val("");
+    });
+
+</script>
 </body>
 </html>
