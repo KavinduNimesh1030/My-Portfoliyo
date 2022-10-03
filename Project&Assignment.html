@@ -17,8 +17,9 @@
             grid-template-rows: repeat(3, 1fr);
             grid-template-columns: repeat(3, 1fr);
             row-gap: 54px;
-            transform: translate(0px, 10px);
-        }
+            transform: translate(0px, -62px);
+            /* background: url(assets/image/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg); */
+           }
         #mainSec>div {
             display: flex;
             width: 64%;
@@ -34,6 +35,8 @@
             width: 100%;
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
+            border: 2px solid black;
+            border-bottom: none;
         }
         #mainSec>div>div:nth-child(2){
             width: 100%;
@@ -41,6 +44,8 @@
             background-color: #001e80;
             border-bottom-left-radius: 12px;
             border-bottom-right-radius: 12px;
+            border: 2px solid black;
+            border-top: none;
         }
         #mainSec>div>div:nth-child(2)>a>h1{
             text-align: center;
@@ -56,7 +61,68 @@
         #mainSec>div>div:nth-child(2)>a{
             text-decoration: none;
         }
+        header>h1{
+            font-size: 30px;
+            font-family: 'Glory', sans-serif;
+            width: 200px;
+            margin-bottom: -60px;
+            position: relative;
+            left: 6.5%;
+            top: 16px;
+            color: white;
+        }
+        header{
+            height: 71px;
+            background-color: #001e80;
+            margin-top: -20px;
+        }
+        header>div{
+            background: url(assets/image/github.png);
+            background-size: cover;
+            background-position: center;
+            width: 25px;
+            height: 25px;
+            position: relative;
+            left: 96%;
+            top: 49px;
+            margin: 0;
+            /* background-color: white; */
+            border-radius: 122px;
+        }
+        header>a {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 96%;
+            top: 22px;
+            margin: 0;
+            cursor: pointer;
+            z-index: 2;
+        }
+        @media all and (min-width: 320px) and (max-width: 425px) {
+            #mainSec {
+                display: grid;
+                height: 100vh;
+                position: relative;
+                grid-template-rows: repeat(1, 1fr);
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 54px;
+                transform: translate(0px, -62px);
+                /* background: url(assets/image/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg); */
+            }
+            header>div{
+                left: 89%;
 
+            }
+            header>a {
+                left: 89%;
+
+            }
+            #mainSec>div {
+                width: 69%;
+                transform: translate(24%, 95px);
+            }
+        }
 
 
     </style>
@@ -64,6 +130,12 @@
 </head>
 <body>
 <main>
+    <header>
+        <h1>Assignment</h1>
+        <a href="https://github.com/KavinduNimesh1030/My-Portfoliyo/tree/master/assignment"target="_blank"></a>
+        <div>
+        </div>
+    </header>
     <section id="mainSec">
         <div>
             <div>
