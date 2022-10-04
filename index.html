@@ -1476,6 +1476,9 @@
         #Assignment>a{
             text-decoration: none;
         }
+        #HireButton{
+            cursor: pointer;
+        }
 
 
 
@@ -1484,6 +1487,11 @@
         /*-----------------------------------------------------------------------------------------------*/
 
         @media all and (min-width: 768px) and (max-width: 1100px) {
+            #Assignment {
+                position: static;
+                transform: translate(570%, -105px);
+                width: 147px;
+            }
             main > section:first-child > div#background {
                 right: 68px;
                 top: -40px;
@@ -1760,7 +1768,7 @@
             main > section:nth-child(5) {
                 position: relative;
                 top: 402px;
-                height: 642px;
+                height: 592px;
                 background-color: #001e80;
             }
             main > section:nth-child(5) > section:nth-child(3) {
@@ -2155,6 +2163,7 @@
 
         @media all and (min-width: 320px) and (max-width: 425px) {
 
+
             header > nav > ol {
                 width: 100%;
                 background: linear-gradient(#001e80, #7ac6f7);
@@ -2357,6 +2366,7 @@
             #website{
                 display: none;
             }
+
             #prBG{
                 display: block;
                 width: 295px;
@@ -2547,7 +2557,7 @@
             main > section:nth-child(5) {
                 position: relative;
                 top: -236px;
-                height:1066px;
+                height: 1075px;
                 background-color: #001e80;
             }
             main > section:nth-child(5) > h1 {
@@ -2701,10 +2711,22 @@
             main > section:nth-child(5) > #sec1 {
                 width: 70px;
                 height: 70px;
-                top: -37px;
+                top: -46px;
                 right: 73em;
                 margin: auto;
                 position: relative;
+            }
+            #Assignment {
+                position: static;
+                transform: translate(85%, -86px);
+                width: 120px;
+                z-index: 2;
+                margin-left: 0;
+            }
+            #Assignment>a>h1 {
+                font-family: 'Glory', sans-serif;
+                font-size: 13px;
+                color: white;
             }
             main > section:nth-child(5) > #sec1 > section:first-child {
                 width: 50px;
@@ -2983,13 +3005,24 @@
                 margin: auto;
                 margin-right: 0;
             }
-            main > section:first-child > div#project {
-                right: 30%;
-                top: 229px;
-                width: 93px;
-                height: 44px;
-                display: none;
+            main > section:first-child > img#arrow {
+                position: absolute;
+                right: 26%;
+                top: 192px;
+                margin-top: 0;
+                width: 50px;
+                z-index: 1;
+                /* display: none; */
             }
+            main > section:first-child > div#project {
+                right: 24%;
+                /* left: 137px; */
+                top: 235px;
+                width: 93px;
+                height: 39px;
+                /* display: none; */
+            }
+
             main > section:first-child > div#project > img#heart {
                 left: 7px;
                 width: 10px;
@@ -3007,30 +3040,8 @@
                 top: -39px;
                 font-size: 19px;
             }
-            main > section:first-child > div#project > a {
-                position: relative;
-                left: 50px;
-                top: -62px;
-                cursor: pointer;
-            }
-            main > section:first-child > div#project > a > img#arrowHead {
-                position: relative;
-                left: 5px;
-                width: 15px;
-                height: 16px;
-                top: 9px;
-                cursor: pointer;
-                display: none;
-            }
-            main > section:first-child > img#arrow {
-                position: absolute;
-                right: 35%;
-                top: 173px;
-                margin-top: 0;
-                width: 61px;
-                z-index: 1;
-                display: none;
-            }
+
+
             main > section:nth-child(3) > article {
                 all: unset;
                 position: absolute;
@@ -3042,6 +3053,30 @@
                 height: 20%;
                 /* align-items: center; */
                 padding-left: 84%;
+            }
+            main > section:first-child > div#project > h1#title {
+                position: relative;
+                left: 21px;
+                top: -22px;
+                font-size: 13px;
+            }
+            main > section:first-child > div#project > a {
+                /* position: relative; */
+                left: 31px;
+                /* top: 329px; */
+                cursor: pointer;
+                width: 25px;
+                z-index: 2;
+                display: block;
+            }
+            main > section:first-child > div#project > a > img#arrowHead {
+                position: relative;
+                left: 5px;
+                width: 15px;
+                height: 16px;
+                top: 8px;
+                cursor: pointer;
+                 display: block;
             }
             #prBG {
                 display: block;
@@ -3074,10 +3109,17 @@
 
             }
 
+
+
         }
 
         /*Tablet--------------------------------------------------*/
         @media all and (min-width: 475px) and (max-width: 1000px) {
+            #Assignment {
+                position: static;
+                transform: translate(19%, -138px);
+                width: 147px;
+            }
             main > section:first-child > img#mainImg {
                 position: absolute;
                 right: 20px;
@@ -3472,11 +3514,35 @@
 
         /*------------------------------------------------------------------------------*/
         @media all and (min-width: 375px) and (max-width: 425px) {
+            main > section:first-child > img#arrow {
+                position: absolute;
+                right: 26%;
+                top: 214px;
+                margin-top: 0;
+                width: 50px;
+                z-index: 1;
+                /* display: none; */
+            }
+            main > section:first-child > div#project {
+                right: 24%;
+                /* left: 137px; */
+                top: 255px;
+                width: 93px;
+                height: 44px;
+                /* display: none; */
+            }
             main > section:first-child > img#mainImg {
                 right: 1px;
                 top: -22px;
                 margin-top: 12px;
                 width: 161px;
+            }
+            #Assignment {
+                position: static;
+                transform: translate(108%, -86px);
+                width: 120px;
+                z-index: 2;
+                margin-left: 0;
             }
 
             main > section:first-child > div#background {
@@ -3601,8 +3667,15 @@
                 main > section:nth-child(5) {
                     position: relative;
                     top: -236px;
-                    height: 1156px;
+                    height: 1169px;
                     background-color: #001e80;
+                }
+                #Assignment {
+                    position: static;
+                    transform: translate(130%, -86px);
+                    width: 120px;
+                    z-index: 2;
+                    margin-left: 0;
                 }
                 footer > h1#contact {
                     position: relative;
@@ -3626,10 +3699,38 @@
 
 
 
+
             }
+
+        @media (min-width: 425px) and (max-width: 425px) {
+            #prBG {
+                display: block;
+                width: 97%;
+                height: 185px;
+                background-color: grey;
+                transform: translateY(165px);
+                z-index: 1;
+                opacity: 50%;
+                border-radius: 30px;
+                left: 4px;
+            }
+            main > section:nth-child(3) > article > pr {
+                top: 71px;
+                /* width: 253px; */
+            }
+            main > section:nth-child(3) > h2 > dfn {
+                font-style: unset;
+                /* transform: translateX(3px); */
+                position: relative;
+                left: 35px;
+                top: 4px;
+            }
+        }
+
 
 
 </style>
+
 </head>
 <body>
 <header>
@@ -3900,8 +4001,7 @@
         <h1>Design By Kavindu Nimesh</h1>
         <h1>kavindunimesh286@gmail.com</h1>
     </section>
-
-
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
 </footer>
 <script>
     var menuList = document.getElementById("menuList");
@@ -3915,6 +4015,10 @@
             menuList.style.maxHeight = "0px";
         }
     }
+    $("#HireButton").click(function (){
+        open("mailto:kavindunimesh286@gmail.com");
+
+    });
 </script>
 </body>
 </html>
