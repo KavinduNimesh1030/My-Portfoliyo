@@ -1,4 +1,4 @@
-
+var items = [];
 $("#btnSaveItem").click(function (){
 
     let code = $("#txtItemCode").val();
@@ -8,6 +8,16 @@ $("#btnSaveItem").click(function (){
 
     saveItem(code,itemName,qty ,price);
 })
+
+function setItemTextfeildValues(code,itemName,qty,price) {
+    $("#txtItemCode").val(code);
+    $("#txtItemName").val(itemName);
+    $("#txtItemQty").val(qty);
+    $("#txtItemPrice").val(price);
+
+}
+
+
 function saveItem(code, itemName, qty, price) {
 
     var item = {
@@ -17,10 +27,12 @@ function saveItem(code, itemName, qty, price) {
         "price": price,
 
     }
+    console.log(items)
     items.push(item);
     loadAllItems();
     bindItemRowClickEvent();
-    //setTextfieldValues("", "", "", "");
+    setItemTextfeildValues("", "", "", "");
+
 }
 function loadAllItems() {
     //remove all the table body content before adding data
@@ -52,5 +64,78 @@ function bindItemRowClickEvent() {
         $("#addItem").click();
 
     });
+
+    $("#btnItemSearch").click(function (){
+        let typedCode = $("#txtItemSearch").val();
+        let item = searchItems(typedCode);
+        if (item != null) {
+            setItemTextfeildValues(item.code, item.itemName, item.quantity, item.price);
+            $("#addItem").click();
+        } else {
+            alert("There is no Item available for that " + typedCode);
+            setItemTextfeildValues("", "", "", "");
+        }
+
+    });
+
+    $("#btnUpdateItem").click(function () {
+        let response = updateItem($("#txtItemCode").val());
+        if (response) {
+            alert("Update Item Success!");
+            setItemTextfeildValues("", "", "", "");
+        } else {
+            alert("Update Item failed!");
+        }
+    });
+
+
+    $("#btnDeleteItem").click(function (){
+        let deleteCode = $("#txtItemCode").val();
+
+        let option = confirm("Do you really want to delete " + deleteCode);
+        if (option) {
+            if (deleteItem(deleteCode)) {
+                alert("Item Successfully Deleted..");
+                setItemTextfeildValues("", "", "", "");
+            } else  {
+                alert("No such Item to delete. please check the id");
+            }
+        }
+    });
+
+    function deleteItem(itemCode) {
+        let item = searchItems(itemCode);
+        if (item != null) {
+            let indexNumber = items.indexOf(item);
+            items.splice(indexNumber, 1);
+            loadAllItems();
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function updateItem(code) {
+        let item = searchItems(code);
+        if (item != null) {
+            item.code = $("#txtItemCode").val();
+            item.itemName = $("#txtItemName").val();
+            item.quantity = $("#txtItemQty").val();
+            item.price = $("#txtItemPrice").val();
+            loadAllItems();
+            return true;
+        } else {
+            return false
+        }
+    }
+
+
+    function searchItems(code) {
+        for (let item of items) {
+            if (item.code == code) {
+                return item;
+            }
+        }
+        return null;
+    }
 
 }
