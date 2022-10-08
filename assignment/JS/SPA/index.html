@@ -393,26 +393,26 @@
                     <div class="modal-body">
                         <section>
                             <div class="mb-3">
-                                <label class="form-label" for="formFile">Item Code</label>
-                                <input class="form-control" id="formFile" type="text">
+                                <label class="form-label" for="txtItemCode">Item Code</label>
+                                <input class="form-control" id="txtItemCode" type="text">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="formFileMultiple">Item Name</label>
-                                <input class="form-control" id="formFileMultiple" multiple type="text">
+                                <label class="form-label" for="txtItemName">Item Name</label>
+                                <input class="form-control" id="txtItemName" multiple type="text">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="formFileDisabled">Quantity</label>
-                                <input class="form-control" id="formFileDisabled" type="text">
+                                <label class="form-label" for="txtItemQty">Quantity</label>
+                                <input class="form-control" id="txtItemQty" type="text">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="formFileSm">price</label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="number">
+                                <label class="form-label" for="txtItemPrice">price</label>
+                                <input class="form-control form-control-sm" id="txtItemPrice" type="number">
                             </div>
 
                             <div aria-label="Basic mixed styles example" class="btn-group" role="group">
-                                <button class="btn btn-danger" type="button">Item Delete</button>
-                                <button class="btn btn-warning" type="button">Update</button>
-                                <button class="btn btn-success" type="button">Save</button>
+                                <button class="btn btn-danger" type="button" id="btnDeleteItem">Item Delete</button>
+                                <button class="btn btn-warning" type="button" id="btnUpdateItem">Update</button>
+                                <button class="btn btn-success" type="button" id="btnSaveItem">Save</button>
                             </div>
                         </section>
                     </div>
@@ -463,26 +463,9 @@
                         <th>Item Price</th>
                     </tr>
                     </thead>
-                    <tbdoy>
-                        <tr>
-                            <td>I001</td>
-                            <td>Milk Powder</td>
-                            <td>100</td>
-                            <td>1000.00</td>
-                        </tr>
-                        <tr>
-                            <td>I001</td>
-                            <td>Milk Powder</td>
-                            <td>100</td>
-                            <td>1000.00</td>
-                        </tr>
-                        <tr>
-                            <td>I001</td>
-                            <td>Milk Powder</td>
-                            <td>100</td>
-                            <td>1000.00</td>
-                        </tr>
-                    </tbdoy>
+                    <tbody id="tblItem">
+
+                    </tbody>
                 </table>
             </div>
 
@@ -541,7 +524,7 @@
                     </li>
                     <li class="list-group-item">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
-                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Name</label>
+                            <label class="form-label d-inline mt-2" style="font-size: 13px">Name</label>
                             <input class="form-control mb-2" id="formFil5" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5">
@@ -551,7 +534,7 @@
                     </li>
                     <li class="list-group-item">
                         <div class="form-check col-12 me-0 ps-2 mt-0">
-                            <label class="form-label d-inline mt-2" for="formFile"
+                            <label class="form-label d-inline mt-2"
                                    style="font-size: 13px">Address</label>
                             <input class="form-control mb-2" id="formFil7" style="height:27px" type="text">
                         </div>
@@ -584,7 +567,7 @@
 
                     <li class="list-group-item">
                         <div class="form-check form-check-inline ps-0 col-4">
-                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Item
+                            <label class="form-label d-inline mt-2"  style="font-size: 13px">Item
                                 Name</label>
                             <input class="form-control mb-2" style="height:27px" type="text">
                         </div>
@@ -600,7 +583,7 @@
                     </li>
                     <li class="list-group-item">
                         <div class="form-check col-12 me-0 ps-2 mt-0">
-                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Order
+                            <label class="form-label d-inline mt-2" style="font-size: 13px">Order
                                 Quantity</label>
                             <input class="form-control mb-2" style="height:27px" type="text">
                         </div>
@@ -661,7 +644,7 @@
                             <input class="form-control" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline col-5 ps-0 mt-2">
-                            <label class="form-label d-inline " for="formFile" style="font-size: 13px">Discount</label>
+                            <label class="form-label d-inline " style="font-size: 13px">Discount</label>
                             <input class="form-control" style="height:27px" type="number">
                             </select>
 
@@ -719,6 +702,7 @@
 
 <script src="controller/DashboardController.js"></script>
 <script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
 
 
 </body>

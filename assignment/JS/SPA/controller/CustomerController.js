@@ -1,4 +1,3 @@
-var customers = [];
 $("#save_btn").click(function () {
 
     let cusId = $("#cusId").val();
