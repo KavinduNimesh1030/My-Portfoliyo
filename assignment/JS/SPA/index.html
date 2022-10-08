@@ -7,7 +7,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /*Dashboard styles---------------------------------------------------*/
-        .bgInDashboard{
+        .bgInDashboard {
             display: flex;
             /* flex-direction: row; */
             transform: translate(5%, 32px);
@@ -18,25 +18,27 @@
 
 
         }
-    /*    .mainBgInDashboard {
-            width: 90%;
-            height: 597px;
-            background-color: #e3e1e1;
-            position: relative;
-            top: 31px;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }*/
+
+        /*    .mainBgInDashboard {
+                width: 90%;
+                height: 597px;
+                background-color: #e3e1e1;
+                position: relative;
+                top: 31px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }*/
         /*Customer styles---------------------------------------------------*/
-        .bgInCus{
+        .bgInCus {
             display: flex;
             flex-direction: column;
             transform: translate(5%, 53px);
             gap: 20px;
 
         }
-        .mainBgInCus{
+
+        .mainBgInCus {
             width: 90%;
             height: 550px;
             background-color: #e3e1e1;
@@ -46,34 +48,40 @@
             right: 0;
             margin: auto;
         }
-        .tableBgInCus{
+
+        .tableBgInCus {
             background-color: white;
             width: 90%;
 
         }
-        .searchBgInCus{
+
+        .searchBgInCus {
             background-color: white;
             width: 50%;
             flex-shrink: 1;
             border-radius: 10px;
         }
-        #addCustomer{
+
+        #addCustomer {
             transform: translateX(448px);
         }
+
         .select {
             transform: translate(100px, -53px);
             position: absolute;
             width: 223px;
         }
+
         /*Item---------------------------------------------------------*/
-        .bg{
+        .bg {
             display: flex;
             flex-direction: column;
             transform: translate(5%, 53px);
             gap: 20px;
 
         }
-        .mainBg{
+
+        .mainBg {
             width: 90%;
             height: 550px;
             background-color: #e3e1e1;
@@ -83,33 +91,39 @@
             right: 0;
             margin: auto;
         }
-        .tableBgInItem{
+
+        .tableBgInItem {
             background-color: white;
             width: 90%;
 
         }
-        .searchBgInItem{
+
+        .searchBgInItem {
             background-color: white;
             width: 50%;
             flex-shrink: 1;
             border-radius: 10px;
         }
-        #addItem{
+
+        #addItem {
             transform: translateX(448px);
         }
+
         .select {
             transform: translate(100px, -53px);
             position: absolute;
             width: 223px;
         }
+
         /*placeOrder-------------------------------------------------------*/
-        .bgInPlaceOrder{
+        .bgInPlaceOrder {
             display: flex;
             /*flex-direction: row;*/
             transform: translate(5%, 32px);
             gap: 20px;
 
         }
+
         .mainBgInPlaceOrder {
             width: 90%;
             height: 597px;
@@ -120,6 +134,7 @@
             right: 0;
             margin: auto;
         }
+
         .bgInDashboard {
             display: flex;
             /* flex-direction: row; */
@@ -131,6 +146,7 @@
             width: 90%;
 
         }
+
         .mainBgInDashboard {
             width: 100%;
             height: 597px;
@@ -140,9 +156,20 @@
             /* left: 0; */
             /* right: 0; */
             /* margin: auto; */
-            background: url("assets/img/blue-gradient-abstract-background-empty-room-with-space-your-text-picture.jpg");
+            background: url("assets/img/blue-gradient-abstract-background-empty-room-with-space-your-text-picture.jpg ");
             background-position: center;
             background-size: cover;
+        }
+        .select {
+            transform: translate(100px, -53px);
+            position: absolute;
+            width: 223px;
+        }
+
+        #txtIdWar, #txtNameWar, #txtAddressWar, #txtSalaryWar {
+            font-size: 0.76rem;
+            color: red;
+            display: none;
         }
     </style>
 
@@ -150,20 +177,22 @@
 
 <body>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+
 <!--Header-------------------------------------------------------->
 <hader>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Wholesale Shop</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                    data-bs-target="#navbarNavAltMarkup" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" id="Home" aria-current="page" href="#">Home</a>
-                    <a class="nav-link"id="order" href="#">Order</a>
-                    <a class="nav-link" id="customer" href="#">Customer</a>
-                    <a class="nav-link" id="item"href="#" >Item</a>
+                    <a aria-current="page" class="nav-link active" href="#" id="Home">Home</a>
+                    <a class="nav-link" href="#" id="order">Order</a>
+                    <a class="nav-link" href="#" id="customer">Customer</a>
+                    <a class="nav-link" href="#" id="item">Item</a>
                 </div>
             </div>
         </div>
@@ -177,40 +206,44 @@
 
         <section class="bgInDashboard">
             <div class="card h-25" style="width: 18rem;">
-                <img src="assets/img/cus.jpg" class="card-img-top" alt="...">
+                <img alt="..." class="card-img-top" src="assets/img/cus.jpg">
                 <div class="card-body">
                     <h5 class="card-title">Customer</h5>
-                    <p class="card-text"> Don't Forget to Add All new Customers to the System and Manage Their Details.</p>
+                    <p class="card-text"> Don't Forget to Add All new Customers to the System and Manage Their
+                        Details.</p>
 
                 </div>
                 <ul class="list-group list-group-flush bg-danger">
-                    <li class="list-group-item btn-success text-white" style="background-color: #c21e1e">Total Customers : 100</li>
+                    <li class="list-group-item btn-success text-white" style="background-color: #c21e1e">Total Customers
+                        : 100
+                    </li>
                 </ul>
 
             </div>
             <div class="card h-25" style="width: 18rem;">
-                <img src="assets/img/item.jpg" class="card-img-top" style="height: 190px;" alt="...">
+                <img alt="..." class="card-img-top" src="assets/img/item.jpg" style="height: 190px;">
                 <div class="card-body">
                     <h5 class="card-title">Item</h5>
-                    <p class="card-text">Don't forget to add new items in stock and manage prices and Quantity on Hand.</p>
+                    <p class="card-text">Don't forget to add new items in stock and manage prices and Quantity on
+                        Hand.</p>
                 </div>
                 <ul class="list-group list-group-flush btn-danger">
-                    <li class="list-group-item text-white"style="background-color: #c21e1e">Total Item : 3000</li>
+                    <li class="list-group-item text-white" style="background-color: #c21e1e">Total Item : 3000</li>
                 </ul>
 
             </div>
             <div class="card h-25" style="width: 18rem;">
-                <img src="assets/img/Order.jpg" class="card-img-top" style="height: 190px;" alt="...">
+                <img alt="..." class="card-img-top" src="assets/img/Order.jpg" style="height: 190px;">
                 <div class="card-body">
                     <h5 class="card-title">Orders</h5>
-                    <p class="card-text">Place All Customer's Orders and Make sure to manage.Don't forget to delete return orders.</p>
+                    <p class="card-text">Place All Customer's Orders and Make sure to manage.Don't forget to delete
+                        return orders.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-white" style="background-color: #c21e1e">Total Orders : 150</li>
 
                 </ul>
             </div>
-
 
 
         </section>
@@ -226,43 +259,50 @@
         <nav class="navbar navbar-expand-lg bg-success">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Customer Form</a>
-                <button class="btn btn-primary" id="addCustomer" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+                <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal" id="addCustomer"
+                        type="button">
                     Add+
                 </button>
                 <button class="btn btn-warning">View</button>
             </div>
         </nav>
         <!-- Modal -->
-        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" tabindex="-1">
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Customer Save</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
                         <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                     </div>
                     <div class="modal-body">
                         <section>
                             <div class="mb-3">
-                                <label class="form-label" for="formFile1">Customer ID</label>
-                                <input class="form-control" id="formFile1" type="text">
+                                <label class="form-label" for="cusId">Customer ID</label>
+                                <input class="form-control" id="cusId" type="text">
+                                <h1 id="txtIdWar">Customer id is a required failed. pattern C001</h1>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="formFileMultiple1">Customer Name</label>
-                                <input class="form-control" id="formFileMultiple1" multiple type="text">
+                                <label class="form-label" for="cusName">Customer Name</label>
+                                <input class="form-control" id="cusName" multiple type="text">
+                                <h1 id="txtNameWar">Customer Name is a required failed.Minimum 5 Max 20 Space
+                                    allowed</h1>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="formFileDisabled1">Customer Address</label>
-                                <input class="form-control" id="formFileDisabled1" type="text">
+                                <label class="form-label" for="cusAddress">Customer Address</label>
+                                <input class="form-control" id="cusAddress" type="text">
+                                <h1 id="txtAddressWar">Customer Address is a required failed.Minimum 8</h1>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="formFileSm1">Customer Salary</label>
-                                <input class="form-control form-control-sm" id="formFileSm1" type="number">
+                                <label class="form-label" for="cusSalary">Customer Salary</label>
+                                <input class="form-control form-control-sm" id="cusSalary" type="number">
+                                <h1 id="txtSalaryWar">Customer Address is a required failed.pattern 100 or 100.00</h1>
                             </div>
 
                             <div aria-label="Basic mixed styles example" class="btn-group" role="group">
-                                <button class="btn btn-danger" type="button">Customer Delete</button>
-                                <button class="btn btn-warning" type="button">Update</button>
-                                <button class="btn btn-success" type="button">Save</button>
+                                <button class="btn btn-danger" id="deleteCus" type="button">Customer Delete</button>
+                                <button class="btn btn-warning" id="updateCus" type="button">Update</button>
+                                <button class="btn btn-success" id="get" type="button">getAll</button>
+                                <button class="btn btn-success" id="save_btn" type="button">Save</button>
                             </div>
                         </section>
                     </div>
@@ -277,18 +317,17 @@
         <section class="bgInCus">
 
             <div class="searchBgInCus">
-                <label for="exampleDataList1" class="form-label ms-3 mt-2">Customer Search</label>
-                <input class="form-control mt-2 ms-3 w-75" list="datalistOptions" id="exampleDataList1" placeholder="Type to search...">
+                <label class="form-label ms-3 mt-2" for="txtCustomerSearch">Customer Search</label>
+                <input class="form-control mt-2 ms-3 w-75" id="txtCustomerSearch" list="datalistOptions1"
+                       placeholder="Type to search...">
                 <datalist id="datalistOptions1">
-                    <option value="San Francisco">
-                    <option value="New York">
-                    <option value="Seattle">
-                    <option value="Los Angeles">
-                    <option value="Chicago">
+                    <option value="C001">
+                    <option value="C002">
+                    <option value="C003">
                 </datalist>
-                <button class="btn btn-success mt-3 mb-3 ms-3">Search</button>
+                <button class="btn btn-success mt-3 mb-3 ms-3" id="btnCusSearch">Search</button>
                 <div class="select">
-                    <select class="form-select w-50" aria-label="Default select example">
+                    <select aria-label="Default select example" class="form-select w-50">
                         <option selected></option>
                         <option value="1">Name</option>
                         <option value="2">Id</option>
@@ -296,15 +335,18 @@
                     </select>
                 </div>
             </div>
+
+            <!--btn--------------------------------------------------------->
             <div class="">
                 <button class="btn btn-danger">Delete</button>
                 <button class="btn btn-primary">Detail</button>
                 <button class="btn btn-success">Clear</button>
             </div>
+            <!--Table-------------------------------------------------->
 
-            <div class="tableBgInCus">
-                <table class="table table-bordered table-hover table-striped">
-                    <thead class="bg-success bg-opacity-50 text-black">
+            <div class="tableBgInCus col-8">
+                <table class="table table-bordered table-hover">
+                    <thead class="bg-success text-white">
                     <tr>
                         <th>Customer ID</th>
                         <th>Customer Name</th>
@@ -312,32 +354,18 @@
                         <th>Customer Salary</th>
                     </tr>
                     </thead>
-                    <tbdoy>
-                        <tr>
-                            <td>C001</td>
-                            <td>Dasun</td>
-                            <td>Galle</td>
-                            <td>100000</td>
-                        </tr>
-                        <tr>
-                            <td>C002</td>
-                            <td>Dasun</td>
-                            <td>Galle</td>
-                            <td>100000</td>
-                        </tr>
-                        <tr>
-                            <td>C002</td>
-                            <td>Dasun</td>
-                            <td>Galle</td>
-                            <td>100000</td>
-                        </tr>
-                    </tbdoy>
+                    <tbody id="tblCustomer">
+
+                    </tbody>
                 </table>
             </div>
 
         </section>
     </section>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
+
     </body>
 </main>
 <!--Item--------------------------------------------------------------->
@@ -347,18 +375,19 @@
         <nav class="navbar navbar-expand-lg bg-success">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Item Form</a>
-                <button class="btn btn-primary" id="addItem" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+                <button class="btn btn-primary" data-bs-target="#exampleModal1" data-bs-toggle="modal" id="addItem"
+                        type="button">
                     Add+
                 </button>
                 <button class="btn btn-warning">View</button>
             </div>
         </nav>
         <!-- Modal -->
-        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
+                        <h5 class="modal-title" id="exampleModalLabel1">Customer Save</h5>
                         <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                     </div>
                     <div class="modal-body">
@@ -398,8 +427,9 @@
         <section class="bg">
 
             <div class="searchBgInItem">
-                <label for="exampleDataList" class="form-label ms-3 mt-2">Item Search</label>
-                <input class="form-control mt-2 ms-3 w-75" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <label class="form-label ms-3 mt-2" for="exampleDataList">Item Search</label>
+                <input class="form-control mt-2 ms-3 w-75" id="exampleDataList" list="datalistOptions"
+                       placeholder="Type to search...">
                 <datalist id="datalistOptions">
                     <option value="San Francisco">
                     <option value="New York">
@@ -409,7 +439,7 @@
                 </datalist>
                 <button class="btn btn-success mt-3 mb-3 ms-3">Search</button>
                 <div class="select">
-                    <select class="form-select w-50" aria-label="Default select example">
+                    <select aria-label="Default select example" class="form-select w-50">
                         <option selected></option>
                         <option value="1">Code</option>
                         <option value="2">Name</option>
@@ -482,19 +512,20 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item h-auto">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
-                            <label class="form-label d-inline mt-2" for="formFile11" style="font-size: 13px">Order ID</label>
-                            <input class="form-control mb-2" id="formFile11" type="text"  style="height:27px">
+                            <label class="form-label d-inline mt-2" for="formFile11" style="font-size: 13px">Order
+                                ID</label>
+                            <input class="form-control mb-2" id="formFile11" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Date</label>
-                            <input class="form-control" id="formFile2" type="text" style="height:27px">
+                            <input class="form-control" id="formFile2" style="height:27px" type="text">
                         </div>
 
                     </li>
                     <li class="list-group-item">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">customer</label>
-                            <select class="form-select " aria-label="Default select example" style="height:28px">
+                            <select aria-label="Default select example" class="form-select " style="height:28px">
                                 <option selected></option>
                                 <option value="1">Code</option>
                                 <option value="2">Name</option>
@@ -502,25 +533,27 @@
                             </select>
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5 mt-0">
-                            <label class="form-label d-inline" for="formFile2" style="font-size: 13px">customer Id</label>
-                            <input class="form-control" id="formFile4" type="text" style="height:27px">
+                            <label class="form-label d-inline" for="formFile2" style="font-size: 13px">customer
+                                Id</label>
+                            <input class="form-control" id="formFile4" style="height:27px" type="text">
                         </div>
 
                     </li>
                     <li class="list-group-item">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
                             <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Name</label>
-                            <input class="form-control mb-2" id="formFil5" type="text"  style="height:27px">
+                            <input class="form-control mb-2" id="formFil5" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Salary</label>
-                            <input class="form-control" id="formFile6" type="text" style="height:27px">
+                            <input class="form-control" id="formFile6" style="height:27px" type="text">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="form-check col-12 me-0 ps-2 mt-0">
-                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Address</label>
-                            <input class="form-control mb-2" id="formFil7" type="text"  style="height:27px">
+                            <label class="form-label d-inline mt-2" for="formFile"
+                                   style="font-size: 13px">Address</label>
+                            <input class="form-control mb-2" id="formFil7" style="height:27px" type="text">
                         </div>
                     </li>
                 </ul>
@@ -535,7 +568,7 @@
                     <li class="list-group-item h-auto">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Item</label>
-                            <select class="form-select " aria-label="Default select example" style="height:28px">
+                            <select aria-label="Default select example" class="form-select " style="height:28px">
                                 <option selected></option>
                                 <option value="1">Code</option>
                                 <option value="2">Name</option>
@@ -544,30 +577,32 @@
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Item Code</label>
-                            <input class="form-control"  type="text" style="height:27px">
+                            <input class="form-control" style="height:27px" type="text">
                         </div>
 
                     </li>
 
                     <li class="list-group-item">
                         <div class="form-check form-check-inline ps-0 col-4">
-                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Item Name</label>
-                            <input class="form-control mb-2"  type="text"  style="height:27px">
+                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Item
+                                Name</label>
+                            <input class="form-control mb-2" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline ps-0 col-3 ">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Price</label>
-                            <input class="form-control" type="text" style="height:27px">
+                            <input class="form-control" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline ps-0 col-3">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">QtyOnH</label>
-                            <input class="form-control" type="text" style="height:27px">
+                            <input class="form-control" style="height:27px" type="text">
                         </div>
 
                     </li>
                     <li class="list-group-item">
                         <div class="form-check col-12 me-0 ps-2 mt-0">
-                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Order Quantity</label>
-                            <input class="form-control mb-2"type="text"  style="height:27px">
+                            <label class="form-label d-inline mt-2" for="formFile" style="font-size: 13px">Order
+                                Quantity</label>
+                            <input class="form-control mb-2" style="height:27px" type="text">
                         </div>
                     </li>
                     <li class="list-group-item">
@@ -623,11 +658,11 @@
                     <li class="list-group-item">
                         <div class="form-check form-check-inline col-5 ps-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Cash</label>
-                            <input class="form-control"type="text" style="height:27px">
+                            <input class="form-control" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline col-5 ps-0 mt-2">
                             <label class="form-label d-inline " for="formFile" style="font-size: 13px">Discount</label>
-                            <input class="form-control"type="number" style="height:27px">
+                            <input class="form-control" style="height:27px" type="number">
                             </select>
 
                         </div>
@@ -636,7 +671,7 @@
                     <li class="list-group-item">
                         <div class="form-check col-12 ps-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Balance</label>
-                            <input class="form-control"type="text" style="height:27px">
+                            <input class="form-control" style="height:27px" type="text">
                         </div>
                     </li>
                     </li>
@@ -652,7 +687,8 @@
 
         </section>
 
-        <table class="table table-bordered table-hover table-striped mt-5 ms-5"style="transform: translateX(27px);width: 90%">
+        <table class="table table-bordered table-hover table-striped mt-5 ms-5"
+               style="transform: translateX(27px);width: 90%">
             <thead class="bg-success bg-opacity-50 text-black">
             <tr class="w-50">
                 <th>Item Code</th>
@@ -680,45 +716,10 @@
 
     </body>
 </main>
-<script>
 
-    $("#customerMain").hide()
-    $("#ItemMain").hide()
-    $("#placeOrderMain").hide()
+<script src="controller/DashboardController.js"></script>
+<script src="controller/CustomerController.js"></script>
 
-    $("#customer").click(function(){
-        $("#customerMain").show()
-        $("#ItemMain").hide()
-        $("#placeOrderMain").hide()
-        $("#dashboardMain").hide()
-
-    });
-    $("#item").click(function(){
-        $("#customerMain").hide()
-        $("#ItemMain").show()
-        $("#placeOrderMain").hide()
-        $("#dashboardMain").hide()
-
-    });
-    $("#Home").click(function(){
-        $("#customerMain").hide()
-        $("#ItemMain").hide()
-        $("#placeOrderMain").hide()
-        $("#dashboardMain").show()
-
-    });
-    $("#order").click(function(){
-        $("#customerMain").hide()
-        $("#ItemMain").hide()
-        $("#placeOrderMain").show()
-        $("#dashboardMain").hide()
-
-
-    });
-
-
-    /*ooooooooo*/
-</script>
 
 </body>
 </html>
