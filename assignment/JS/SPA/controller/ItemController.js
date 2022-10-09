@@ -1,4 +1,87 @@
 var items = [];
+
+function validationItem(input, pattern, txt, war) {
+    var id = pattern;
+    var result = id.test(input);
+    if (result) {
+        $(txt).css('border-color', 'green');
+        $(war).css('display', 'none')
+        return true;
+    } else {
+        $(txt).css('border-color', 'red');
+        $(war).css('display', 'block');
+        return false;
+    }
+}
+/*--------------------------------------------Validation-------------------------------------------*/
+$("#txtItemCode").on('keydown', function (event) {
+
+    let pattern = /^(I)[0-9]{2}$/;
+    let x = validationItem($("#txtItemCode").val(), pattern, "#txtItemCode", "#txtItemCodeWar");
+
+    //let customer1 = searchCustomer($("#cusId").val());
+    if (event.key == "Enter") {
+
+        let pattern = /^(I)[0-9]{3}$/;
+        let x = validationItem($("#txtItemCode").val(), pattern, "#txtItemCode", "#txtItemCodeWar");
+        if (x) {
+            $("#txtItemName").focus();
+        } else {
+            event.preventDefault();
+        }
+
+    }
+
+
+});
+
+$("#txtItemName").on('keydown', function (event) {
+
+    let pattern = /^[A-z ]{5,20}$/;
+    let x = validationItem($("#txtItemName").val(), pattern, "#txtItemName", "#txtItemNameWar");
+
+    if (event.key == "Enter") {
+        let x = validationItem($("#txtItemName").val(), pattern, "#txtItemName", "#txtItemNameWar");
+
+        if (x) {
+            $("#txtItemQty").focus();
+        } else {
+            event.preventDefault();
+        }
+    }
+
+});
+$("#txtItemQty").on('keydown', function (event) {
+
+    let pattern = /^[A-z 0-9]{2,10}$/;
+    let x = validationItem($("#txtItemQty").val(), pattern, "#txtItemQty", "#txtItemQtyWar");
+
+    if (event.key == "Enter") {
+        if (x) {
+            $("#txtItemPrice").focus();
+        } else {
+            event.preventDefault();
+        }
+    }
+
+});
+$("#txtItemPrice").on('keydown', function (event) {
+
+    let pattern = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+    let x = validationItem($("#txtItemPrice").val(), pattern, "#txtItemPrice", "#txtItemPriceWar");
+
+    if (event.key == "Enter") {
+        if (x) {
+            confirm("are u sure ??");
+            $("#btnSaveItem").click();
+            $("#txtItemCode").focus();
+        } else {
+            event.preventDefault();
+        }
+    }
+
+});
+/*-------------------------------------------------------------------------------------*/
 $("#btnSaveItem").click(function (){
 
     let code = $("#txtItemCode").val();
@@ -79,29 +162,40 @@ function bindItemRowClickEvent() {
     });
 
     $("#btnUpdateItem").click(function () {
-        let response = updateItem($("#txtItemCode").val());
+        let response  = updateItem($("#txtItemCode").val());
         if (response) {
             alert("Update Item Success!");
             setItemTextfeildValues("", "", "", "");
-        } else {
+        } else if(response){
             alert("Update Item failed!");
         }
     });
 
 
-    $("#btnDeleteItem").click(function (){
-        let deleteCode = $("#txtItemCode").val();
-
+    $("#btnDeleteItems").click(function () {
+        /*let deleteCode = $("#txtItemCode").val();
         let option = confirm("Do you really want to delete " + deleteCode);
+        console.log("1st round")
         if (option) {
             if (deleteItem(deleteCode)) {
-                alert("Item Successfully Deleted..");
                 setItemTextfeildValues("", "", "", "");
-            } else  {
+                alert("Item Successfully Deleted..");
+                console.log("if condition")
+                return false;
+            } else {
                 alert("No such Item to delete. please check the id");
             }
+
+        }*/
+        let deleteCode = $("#txtItemCode").val();
+        if (deleteItem(deleteCode)) {
+            setItemTextfeildValues("", "", "", "");
+            alert("Item Successfully Deleted..");
+            console.log("if condition")
         }
     });
+
+
 
     function deleteItem(itemCode) {
         let item = searchItems(itemCode);
@@ -137,5 +231,6 @@ function bindItemRowClickEvent() {
         }
         return null;
     }
+
 
 }

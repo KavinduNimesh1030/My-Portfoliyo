@@ -171,6 +171,11 @@
             color: red;
             display: none;
         }
+        #txtItemCodeWar,#txtItemNameWar ,#txtItemQtyWar ,#txtItemPriceWar{
+            font-size: 0.76rem;
+            color: red;
+            display: none;
+        }
     </style>
 
 </head>
@@ -295,7 +300,7 @@
                             <div class="mb-3">
                                 <label class="form-label" for="cusSalary">Customer Salary</label>
                                 <input class="form-control form-control-sm" id="cusSalary" type="number">
-                                <h1 id="txtSalaryWar">Customer Address is a required failed.pattern 100 or 100.00</h1>
+                                <h1 id="txtSalaryWar">Customer salary is a required failed.pattern 100 or 100.00</h1>
                             </div>
 
                             <div aria-label="Basic mixed styles example" class="btn-group" role="group">
@@ -395,24 +400,29 @@
                             <div class="mb-3">
                                 <label class="form-label" for="txtItemCode">Item Code</label>
                                 <input class="form-control" id="txtItemCode" type="text">
+                                <h1 id="txtItemCodeWar">Item Code is a required failed. pattern I001</h1>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="txtItemName">Item Name</label>
                                 <input class="form-control" id="txtItemName" multiple type="text">
+                                <h1 id="txtItemNameWar">Item Name is a required failed.Minimum 5 Max 20 Space
+                                    allowed</h1>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="txtItemQty">Quantity</label>
                                 <input class="form-control" id="txtItemQty" type="text">
+                                <h1 id="txtItemQtyWar">Item Qty is a required failed</h1>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="txtItemPrice">price</label>
                                 <input class="form-control form-control-sm" id="txtItemPrice" type="number">
+                                <h1 id="txtItemPriceWar">ItemPrice is a required failed.pattern 100 or 100.00</h1>
                             </div>
 
-                            <div aria-label="Basic mixed styles example" class="btn-group" role="group">
-                                <button class="btn btn-danger" type="button" id="btnDeleteItem">Item Delete</button>
-                                <button class="btn btn-warning" type="button" id="btnUpdateItem">Update</button>
-                                <button class="btn btn-success" type="button" id="btnSaveItem">Save</button>
+                            <div aria-label="Basic mixed styles example" class="btn-group1" role="group">
+                                <button class="btn btn-danger" type="button" id="btnDeleteItems">Delete Item</button>
+                                <button class="btn btn-warning" type="button" id="btnUpdateItem">Update Item</button>
+                                <button class="btn btn-success" type="button" id="btnSaveItem">Save Item</button>
                             </div>
                         </section>
                     </div>
@@ -506,11 +516,11 @@
                     <li class="list-group-item">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">customer</label>
-                            <select aria-label="Default select example" class="form-select " style="height:28px">
-                                <option selected></option>
+                            <select aria-label="Default select example" id="selectCusID" class="form-select " style="height:28px;font-size:12px">
+                               <!-- <option selected></option>
                                 <option value="1">Code</option>
                                 <option value="2">Name</option>
-                                <option value="3">Price</option>
+                                <option value="3">Price</option>-->
                             </select>
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5 mt-0">
@@ -701,6 +711,7 @@
 <script src="controller/DashboardController.js"></script>
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
+<script src="controller/PurchaseOrderController.js"></script>
 
 
 </body>

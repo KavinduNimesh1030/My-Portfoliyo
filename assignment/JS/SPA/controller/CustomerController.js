@@ -192,7 +192,9 @@ function saveCustomer(cusId, cusName, cusAddress, cusSalary) {
     customers.push(customer);
     loadAllCustomers();
     bindRowClickEvent();
+    loadAllCustomersForOption();
     setTextfieldValues("", "", "", "");
+
 }
 
 function deleteCustomer(customerID) {
