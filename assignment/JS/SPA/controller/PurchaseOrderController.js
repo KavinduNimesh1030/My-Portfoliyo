@@ -95,14 +95,29 @@ function addItem(itemCode, itemName, price, qty, total) {
 
     var three = parseFloat(currentVal) + parseFloat(total);
     $("#lblTotalAmount").text(three);
+    $("#lblSubTotalAmount").text(three);
     bindOrderRowClickEvent();
    // setItemTextfeildValues("", "", "", "");
 
 }
 $("#txtCash").on('keyup' ,function (event){
-    let amount = $("#txtCash").val();
+   findBalance();
+});
+$("#txtDiscount").on('keyup' ,function (event){
+    let discount = $("#txtDiscount").val();
     let total = $("#lblTotalAmount").text();
+    let balance = parseFloat(total)-(parseFloat(total)*parseFloat(discount)/100);
+    $("#lblSubTotalAmount").text(balance);
+    findBalance();
+
+})
+
+function findBalance(){
+    let amount = $("#txtCash").val();
+    let total = $("#lblSubTotalAmount").text();
     let balance = parseFloat(amount) - parseFloat(total)
     $("#txtBalance").val(balance);
-});
+}
+
+
 
