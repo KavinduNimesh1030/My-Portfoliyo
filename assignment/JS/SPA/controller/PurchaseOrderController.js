@@ -51,17 +51,16 @@ $("#btnAddToCart").click(function (){
     let itemPrice =$("#txtOrderItemPrice").val();
     let itemQty =$("#txtOrderQty").val();
     let itemTotal =$("#txtOrderItemPrice").val()*$("#txtOrderQty").val();
-     addItem(itemCode,itemName,itemPrice,itemQty,itemTotal);
+     addItem(itemCode,itemName,itemPrice,itemQty,parseFloat(itemTotal));
 });
 
 function loadAllCartItems() {
-    let balance;
     $("#tblOrderCart").empty();
         for (var order of placeOrder) {
             var row = `<tr><td>${order.itemCode}</td><td>${order.itemName}</td><td>${order.itemPrice}</td><td>${order.quantity}</td><td>${order.total}</td></tr>`;
             /*var row= "<tr><td>"+order.itemCode+"</td><td>"+order.itemName+"</td><td>"+order.quantity+"</td><td>"+order.quantity+"</td></tr>";*/
             $("#tblOrderCart").append(row);
-             balance = order.total;
+
 
         }
 
@@ -83,7 +82,9 @@ function addItem(itemCode, itemName, price, qty, total) {
     }
     placeOrder.push(order);
     loadAllCartItems();
-     /*let currentVal = $("#lblTotal").innerText!="0.00"?$("#txtBalance").val():"0";*/
+     let currentVal = $("#lblTotalAmount").text()!="0.00"?$("#lblTotalAmount").text():"0";
+     console.log("lblValue "+$("#lblTotalAmount").text())
+    console.log("currentValue "+currentVal)
     /* if(currentVal!= ""){
          currentVal = $("#txtBalance").val();
          console.log("000");
@@ -92,11 +93,16 @@ function addItem(itemCode, itemName, price, qty, total) {
          currentVal = "0";
      }*/
 
-    var three =+ parseInt(total);
-    $("#txtBalance").val(three);
-    $("#lblTotal").text(three);
+    var three = parseFloat(currentVal) + parseFloat(total);
+    $("#lblTotalAmount").text(three);
     bindOrderRowClickEvent();
    // setItemTextfeildValues("", "", "", "");
 
 }
+$("#txtCash").on('keyup' ,function (event){
+    let amount = $("#txtCash").val();
+    let total = $("#lblTotalAmount").text();
+    let balance = parseFloat(amount) - parseFloat(total)
+    $("#txtBalance").val(balance);
+});
 
