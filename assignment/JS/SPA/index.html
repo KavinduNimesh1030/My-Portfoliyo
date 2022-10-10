@@ -129,7 +129,7 @@
             height: 597px;
             background-color: #e3e1e1;
             position: relative;
-            top: 31px;
+            top: 8px;
             left: 0;
             right: 0;
             margin: auto;
@@ -175,6 +175,11 @@
             font-size: 0.76rem;
             color: red;
             display: none;
+        }
+        .tableBgInOrder{
+            transform: translate(60px, 46px);
+            width: 93%;
+
         }
     </style>
 
@@ -559,16 +564,13 @@
                     <li class="list-group-item h-auto">
                         <div class="form-check form-check-inline col-5 me-0 ps-2 mt-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Item</label>
-                            <select aria-label="Default select example" class="form-select " style="height:28px">
+                            <select aria-label="Default select example" class="form-select" id="selectedItemId" style="height:28px;font-size: 12px">
                                 <option selected></option>
-                                <option value="1">Code</option>
-                                <option value="2">Name</option>
-                                <option value="3">Price</option>
                             </select>
                         </div>
                         <div class="form-check form-check-inline col-6 me-2 ps-5">
-                            <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Item Code</label>
-                            <input class="form-control" style="height:27px" type="text">
+                            <label class="form-label d-inline" for="txtOrderItemId" style="font-size: 13px">Item Code</label>
+                            <input class="form-control" style="height:27px" id="txtOrderItemId" type="text">
                         </div>
 
                     </li>
@@ -577,15 +579,15 @@
                         <div class="form-check form-check-inline ps-0 col-4">
                             <label class="form-label d-inline mt-2"  style="font-size: 13px">Item
                                 Name</label>
-                            <input class="form-control mb-2" style="height:27px" type="text">
+                            <input class="form-control mb-2"  id="txtOrderItemName" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline ps-0 col-3 ">
-                            <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Price</label>
-                            <input class="form-control" style="height:27px" type="text">
+                            <label class="form-label d-inline" for="txtOrderItemPrice" style="font-size: 13px">Price</label>
+                            <input class="form-control"  id="txtOrderItemPrice" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline ps-0 col-3">
-                            <label class="form-label d-inline" for="formFile2" style="font-size: 13px">QtyOnH</label>
-                            <input class="form-control" style="height:27px" type="text">
+                            <label class="form-label d-inline" for="txtOrderItemQty" style="font-size: 13px">QtyOnH</label>
+                            <input class="form-control" id="txtOrderItemQty" style="height:27px" type="text">
                         </div>
 
                     </li>
@@ -593,12 +595,12 @@
                         <div class="form-check col-12 me-0 ps-2 mt-0">
                             <label class="form-label d-inline mt-2" style="font-size: 13px">Order
                                 Quantity</label>
-                            <input class="form-control mb-2" style="height:27px" type="text">
+                            <input class="form-control mb-2" id="txtOrderQty" style="height:27px"  type="text">
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-3">
-                            <button class="btn btn-danger">Add Item</button>
+                            <button class="btn btn-danger" id="btnAddToCart">Add Item</button>
                         </div>
 
                     </li>
@@ -643,17 +645,19 @@
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item pt-4">
-                        <h1 style="color: #001e80;font-size: 24px">Total : 10000.00</h1>
-                        <h1 style="color: red;font-size: 24px">Sub Total : 9500.00</h1>
+                        <h1 id="lblTotal" style="color: #001e80;font-size: 12px">Total </h1>
+                        <h1 id="lblTotalAmount" style="color: #001e80;font-size: 20px">0.00</h1>
+                        <h1 id="lblSubTotal" style="color: red;font-size: 12px">Sub Total </h1>
+                        <h1 id="lblSubTotalAmount" style="color: red;font-size: 20px">9500.00</h1>
                     </li>
                     <li class="list-group-item">
                         <div class="form-check form-check-inline col-5 ps-0">
                             <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Cash</label>
-                            <input class="form-control" style="height:27px" type="text">
+                            <input class="form-control" id="txtCash" style="height:27px" type="text">
                         </div>
                         <div class="form-check form-check-inline col-5 ps-0 mt-2">
                             <label class="form-label d-inline " style="font-size: 13px">Discount</label>
-                            <input class="form-control" style="height:27px" type="number">
+                            <input class="form-control" id="txtDiscount" style="height:27px" type="number">
                             </select>
 
                         </div>
@@ -661,14 +665,14 @@
                     </li>
                     <li class="list-group-item">
                         <div class="form-check col-12 ps-0">
-                            <label class="form-label d-inline" for="formFile2" style="font-size: 13px">Balance</label>
-                            <input class="form-control" style="height:27px" type="text">
+                            <label class="form-label d-inline" for="txtBalance" style="font-size: 13px">Balance</label>
+                            <input class="form-control" id="txtBalance" style="height:27px" type="text">
                         </div>
                     </li>
                     </li>
                     <li class="list-group-item">
                         <div class="d-grid gap-2 col-6 mx-auto mt-2">
-                            <button class="btn btn-success" type="button">purchase</button>
+                            <button class="btn btn-success" id="btnPurchaseOrder" type="button">purchase</button>
                         </div>
                     </li>
                 </ul>
@@ -678,28 +682,40 @@
 
         </section>
 
-        <table class="table table-bordered table-hover table-striped mt-5 ms-5"
-               style="transform: translateX(27px);width: 90%">
-            <thead class="bg-success bg-opacity-50 text-black">
-            <tr class="w-50">
-                <th>Item Code</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
-                <th>quantity</th>
-                <th>Total</th>
-            </tr>
-            </thead>
-            <tbdoy>
-                <tr>
-                    <td>I001</td>
-                    <td>Milk Powder</td>
-                    <td>1000.00</td>
-                    <td>2</td>
-                    <td>2000.00</td>
+<!--
+            <table class="table table-bordered table-hover table-striped mt-5 ms-5"
+                   style="transform: translateX(27px);width: 90%">
+                <thead class="bg-success bg-opacity-50 text-black">
+                <tr class="w-50">
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>quantity</th>
+                    <th>Total</th>
                 </tr>
+                </thead>
+                <tbdoy id="tblOrderCart">
+                </tbdoy>
+            </table>-->
+        <div class="tableBgInOrder">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="bg-success bg-opacity-50 text-black">
+                <tr>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>quantity</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody id="tblOrderCart">
 
-            </tbdoy>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
+
+
 
 
     </section>

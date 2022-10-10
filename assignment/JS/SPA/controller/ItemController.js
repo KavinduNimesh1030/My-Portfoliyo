@@ -115,6 +115,7 @@ function saveItem(code, itemName, qty, price) {
     loadAllItems();
     bindItemRowClickEvent();
     setItemTextfeildValues("", "", "", "");
+    loadAllItemsForOption();
 
 }
 function loadAllItems() {
@@ -132,7 +133,7 @@ function loadAllItems() {
 }
 function bindItemRowClickEvent() {
     $("#tblItem>tr").click(function () {
-
+ 
         let code = $(this).children(':eq(0)').text();
         let itemName = $(this).children(':eq(1)').text();
         let qty = $(this).children(':eq(2)').text();
