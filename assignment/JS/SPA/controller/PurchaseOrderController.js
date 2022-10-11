@@ -2,6 +2,7 @@ var placeOrder = [];
 var purchaseOrder = [];
 var orderDetail =[];
 var cartItemsId =[];
+var duplicatePlaceOrder =[];
 var x = 0;
 
 $(document).ready(function () {
@@ -204,16 +205,20 @@ $("#txtOrderSearch").on('keyup',function (event){
         for (let order of orderDetail) {
             if (orderDetail[i].orderDetailID  == searchId) {
                 console.log("in");
-                for (let pOrder of placeOrder) {
+                for (let pOrder of duplicatePlaceOrder) {
                     if (pOrder.itemCode == order.ODItemCode)
                         var row = `<tr><td>${order.ODItemCode}</td><td>${pOrder.itemName}</td><td>${pOrder.itemPrice}</td><td>${order.qty}</td><td>${pOrder.total}</td></tr>`;
                     $("#tblOrderCart").append(row);
                 }
             }
+            i++;
 
         }
-        i++;
+
     }
+});
+$("#btnAddNewOrder").click(function (){
+    $("#tblOrderCart").empty();
 });
 
 function saveOrderDetail() {
@@ -226,6 +231,7 @@ function saveOrderDetail() {
         }
         i++;
         orderDetail.push(orderDetailOB);
+
     }
 
 }
@@ -261,6 +267,8 @@ function purchaseOrderMethod() {
         'cusId': cusId,
     }
     purchaseOrder.push(OrderDetail);
+    duplicatePlaceOrder = placeOrder;
+    placeOrder =[];
     clearDetail();
     alert("Order Placed!!");
 }
