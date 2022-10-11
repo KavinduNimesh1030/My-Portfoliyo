@@ -194,15 +194,34 @@ function clearDetail() {
     $("#txtBalance").val("");
     $("#lblSubTotalAmount").text("0.00");
     $("#lblTotalAmount").text("0.00");
+    $("#tblOrderCart").empty();
 
 }
+$("#txtOrderSearch").on('keyup',function (event){
+    if(event.key == "Enter") {
+        let searchId = $("#txtOrderSearch").val();
+        let i =0;
+        for (let order of orderDetail) {
+            if (orderDetail[i].orderDetailID  == searchId) {
+                console.log("in");
+                for (let pOrder of placeOrder) {
+                    if (pOrder.itemCode == order.ODItemCode)
+                        var row = `<tr><td>${order.ODItemCode}</td><td>${pOrder.itemName}</td><td>${pOrder.itemPrice}</td><td>${order.qty}</td><td>${pOrder.total}</td></tr>`;
+                    $("#tblOrderCart").append(row);
+                }
+            }
+
+        }
+        i++;
+    }
+});
 
 function saveOrderDetail() {
     let i = 0;
     for (let order of placeOrder) {
         let orderDetailOB ={
             "orderDetailID":$("#txtOrderId").val(),
-            "ItemCode":placeOrder[i].itemCode,
+            "ODItemCode":placeOrder[i].itemCode,
             "qty":$("#txtOrderQty").val(),
         }
         i++;
@@ -243,6 +262,7 @@ function purchaseOrderMethod() {
     }
     purchaseOrder.push(OrderDetail);
     clearDetail();
+    alert("Order Placed!!");
 }
 
 
