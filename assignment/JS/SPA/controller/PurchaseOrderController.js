@@ -1,8 +1,8 @@
 var placeOrder = [];
 var purchaseOrder = [];
-var orderDetail =[];
-var cartItemsId =[];
-var duplicatePlaceOrder =[];
+var orderDetail = [];
+var cartItemsId = [];
+var duplicatePlaceOrder = [];
 var x = 0;
 
 $(document).ready(function () {
@@ -57,14 +57,40 @@ $("#selectCusID").change(function () {
     }
 
 });
+
 $("#btnAddToCart").click(function () {
     let itemCode = $("#txtOrderItemId").val();
     let itemName = $("#txtOrderItemName").val();
     let itemPrice = $("#txtOrderItemPrice").val();
     let itemQty = $("#txtOrderQty").val();
     let itemTotal = $("#txtOrderItemPrice").val() * $("#txtOrderQty").val();
-    let orderId =$("#txtOrderId").val();
-    addItem(itemCode, itemName, itemPrice, itemQty, parseFloat(itemTotal));
+    let orderId = $("#txtOrderId").val();
+
+    let x = 0;
+    if (placeOrder.length != 0) {
+
+            for (let cart of placeOrder) {
+                console.log("1st");
+                if (cart.itemCode == $("#txtOrderItemId").val()) {
+                    let newQty = parseInt(cart.quantity) + parseInt($("#txtOrderQty").val());
+                    cart.quantity = newQty;
+                    $("#tblOrderCart").empty();
+                    loadAllCartItems();
+                    console.log("aaa");
+                    newQty =0;
+                } else if(cart.itemCode != $("#txtOrderItemId").val()) {
+                    console.log("no");
+                    addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
+                    return false
+                }
+
+        }
+
+    } else {
+        addItem(itemCode, itemName, itemPrice, itemQty, parseFloat(itemTotal));
+    }
+
+
 });
 
 function loadAllCartItems() {
@@ -93,12 +119,13 @@ function addItem(itemCode, itemName, price, qty, total) {
         "total": total,
 
     }
+
     placeOrder.push(order);
-    let currentQty = parseInt($("#txtOrderItemQty").val())-parseInt($("#txtOrderQty").val());
+    let currentQty = parseInt($("#txtOrderItemQty").val()) - parseInt($("#txtOrderQty").val());
     for (let item of items) {
         if (item.code == $("#txtOrderItemId").val()) {
-          item.quantity = currentQty;
-          $("#txtOrderItemQty").val(currentQty);
+            item.quantity = currentQty;
+            $("#txtOrderItemQty").val(currentQty);
         }
     }
 
@@ -198,14 +225,16 @@ function clearDetail() {
     $("#tblOrderCart").empty();
 
 }
-$("#txtOrderSearch").on('keydown',function (event){
-    var row ;
-    if(event.key == "Enter") {
+
+$("#txtOrderSearch").on('keydown', function (event) {
+    var row;
+    if (event.key == "Enter") {
+        $("#tblOrderCart").empty();
         console.log("out");
         let searchId = $("#txtOrderSearch").val();
-        let i =0;
+        let i = 0;
         for (let order of orderDetail) {
-            if (orderDetail[i].orderDetailID  == searchId) {
+            if (orderDetail[i].orderDetailID == searchId) {
                 console.log("in");
                 for (let pOrder of duplicatePlaceOrder) {
                     if (pOrder.itemCode == order.ODItemCode)
@@ -220,16 +249,16 @@ $("#txtOrderSearch").on('keydown',function (event){
 
     }
 });
-$("#btnAddNewOrder").click(function (){
+$("#btnAddNewOrder").click(function () {
     $("#tblOrderCart").empty();
 });
 
 function saveOrderDetail() {
     let i = 0;
     for (let order of placeOrder) {
-        let orderDetailOB ={
-            "orderDetailID":$("#txtOrderId").val(),
-            "ODItemCode":placeOrder[i].itemCode,
+        let orderDetailOB = {
+            "orderDetailID": $("#txtOrderId").val(),
+            "ODItemCode": placeOrder[i].itemCode,
             "qty": placeOrder[i].quantity,
         }
         i++;
@@ -245,13 +274,13 @@ $("#btnPurchaseOrder").click(function () {
     let z = x++;
     displayOrderId();
     let balance = $("#txtBalance").val();
-    if (parseInt(balance)<0) {
+    if (parseInt(balance) < 0) {
         alert("insufficient credits ,Check Cash !!");
     } else {
-        if($("#txtOrderCusId").val()!= ""){
+        if ($("#txtOrderCusId").val() != "") {
             purchaseOrderMethod();
-        }else {
-            alert("Add Customer Before the place Order !!") ;
+        } else {
+            alert("Add Customer Before the place Order !!");
         }
 
     }
@@ -272,7 +301,7 @@ function purchaseOrderMethod() {
     }
     purchaseOrder.push(OrderDetail);
     duplicatePlaceOrder = placeOrder;
-    placeOrder =[];
+    placeOrder = [];
     clearDetail();
     alert("Order Placed!!");
 }
