@@ -198,8 +198,10 @@ function clearDetail() {
     $("#tblOrderCart").empty();
 
 }
-$("#txtOrderSearch").on('keyup',function (event){
+$("#txtOrderSearch").on('keydown',function (event){
+    var row ;
     if(event.key == "Enter") {
+        console.log("out");
         let searchId = $("#txtOrderSearch").val();
         let i =0;
         for (let order of orderDetail) {
@@ -207,12 +209,13 @@ $("#txtOrderSearch").on('keyup',function (event){
                 console.log("in");
                 for (let pOrder of duplicatePlaceOrder) {
                     if (pOrder.itemCode == order.ODItemCode)
-                        var row = `<tr><td>${order.ODItemCode}</td><td>${pOrder.itemName}</td><td>${pOrder.itemPrice}</td><td>${order.qty}</td><td>${pOrder.total}</td></tr>`;
-                    $("#tblOrderCart").append(row);
+                        row = `<tr><td>${order.ODItemCode}</td><td>${pOrder.itemName}</td><td>${pOrder.itemPrice}</td><td>${order.qty}</td><td>${pOrder.total}</td></tr>`;
+
                 }
+                $("#tblOrderCart").append(row);
+
             }
             i++;
-
         }
 
     }
@@ -227,12 +230,13 @@ function saveOrderDetail() {
         let orderDetailOB ={
             "orderDetailID":$("#txtOrderId").val(),
             "ODItemCode":placeOrder[i].itemCode,
-            "qty":$("#txtOrderQty").val(),
+            "qty": placeOrder[i].quantity,
         }
         i++;
         orderDetail.push(orderDetailOB);
 
     }
+
 
 }
 
