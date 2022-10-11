@@ -1,5 +1,7 @@
 var placeOrder = [];
 var purchaseOrder = [];
+var orderDetail =[];
+var cartItemsId =[];
 var x = 0;
 
 $(document).ready(function () {
@@ -60,6 +62,7 @@ $("#btnAddToCart").click(function () {
     let itemPrice = $("#txtOrderItemPrice").val();
     let itemQty = $("#txtOrderQty").val();
     let itemTotal = $("#txtOrderItemPrice").val() * $("#txtOrderQty").val();
+    let orderId =$("#txtOrderId").val();
     addItem(itemCode, itemName, itemPrice, itemQty, parseFloat(itemTotal));
 });
 
@@ -100,6 +103,7 @@ function addItem(itemCode, itemName, price, qty, total) {
 
     console.log(currentQty);
     loadAllCartItems();
+    cartItemsId.push($("#txtOrderItemId").val());
     let currentVal = $("#lblTotalAmount").text() != "0.00" ? $("#lblTotalAmount").text() : "0";
     console.log("lblValue " + $("#lblTotalAmount").text())
     console.log("currentValue " + currentVal)
@@ -192,7 +196,23 @@ function clearDetail() {
     $("#lblTotalAmount").text("0.00");
 
 }
+
+function saveOrderDetail() {
+    let i = 0;
+    for (let order of placeOrder) {
+        let orderDetailOB ={
+            "orderDetailID":$("#txtOrderId").val(),
+            "ItemCode":placeOrder[i].itemCode,
+            "qty":$("#txtOrderQty").val(),
+        }
+        i++;
+        orderDetail.push(orderDetailOB);
+    }
+
+}
+
 $("#btnPurchaseOrder").click(function () {
+    saveOrderDetail();
     let z = x++;
     displayOrderId();
     let balance = $("#txtBalance").val();
