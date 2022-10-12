@@ -73,20 +73,39 @@ $("#btnAddToCart").click(function () {
                 console.log("1st");
                 if (cart.itemCode == $("#txtOrderItemId").val()) {
                     let newQty = parseInt(cart.quantity) + parseInt($("#txtOrderQty").val());
+                    let newTot = parseInt(cart.itemPrice)*parseInt(newQty);
+                    cart.total = newTot;
                     cart.quantity = newQty;
                     $("#tblOrderCart").empty();
                     loadAllCartItems();
+                    updateItemQty();
+                    /*--------------------------------------------------------*/
+                   /* let oldValue =  parseInt($("#lblTotalAmount").text());
+                    let newValue  = (parseInt(oldValue)+parseInt(newTot))-parseInt(oldValue);
+                    $("#lblTotalAmount").text(newValue);
+                    $("#lblSubTotalAmount").text(newValue);*/
+                    calTotal();
+                    /*--------------------------------------------------------*/
                     console.log("aaa");
                     newQty =0;
-                } else if(cart.itemCode != $("#txtOrderItemId").val()) {
+                    return false;
+                }/* else if(cart.itemCode != $("#txtOrderItemId").val()) {
                     console.log("no");
                     addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
-                    return false
-                }
 
+                }
+*/
         }
+            for (let cart1 of placeOrder){
+                if(cart1.itemCode != $("#txtOrderItemId").val()) {
+                    console.log("no");
+                    addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
+                        return false;
+                }
+            }
 
     } else {
+        console.log("else")
         addItem(itemCode, itemName, itemPrice, itemQty, parseFloat(itemTotal));
     }
 
@@ -108,6 +127,24 @@ function loadAllCartItems() {
 function bindOrderRowClickEvent() {
 
 }
+function calTotal(){
+    let currentVal = $("#lblTotalAmount").text() != "0.00" ? $("#lblTotalAmount").text() : "0";
+    let tot ;
+    for (let x of placeOrder) {
+        tot =+ parseInt(x.total);
+    }
+    $("#lblTotalAmount").text((parseInt(tot)+parseInt(currentVal))-parseInt(currentVal));
+
+}
+function updateItemQty(){
+    let currentQty = parseInt($("#txtOrderItemQty").val()) - parseInt($("#txtOrderQty").val());
+    for (let item of items) {
+        if (item.code == $("#txtOrderItemId").val()) {
+            item.quantity = currentQty;
+            $("#txtOrderItemQty").val(currentQty);
+        }
+    }
+}
 
 function addItem(itemCode, itemName, price, qty, total) {
 
@@ -121,6 +158,7 @@ function addItem(itemCode, itemName, price, qty, total) {
     }
 
     placeOrder.push(order);
+    //updateItemQty();
     let currentQty = parseInt($("#txtOrderItemQty").val()) - parseInt($("#txtOrderQty").val());
     for (let item of items) {
         if (item.code == $("#txtOrderItemId").val()) {
