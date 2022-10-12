@@ -4,6 +4,7 @@ var orderDetail = [];
 var cartItemsId = [];
 var duplicatePlaceOrder = [];
 var x = 0;
+var t = 0;
 
 $(document).ready(function () {
     displayOrderId();
@@ -244,7 +245,7 @@ function generateOrderId() {
     let a = 0;
     let newVersion;
     /*let y = x++;*/
-    let version = String(x);
+    let version = String(t);
 
     let i = (parseInt(version.substring(1, version.big())) + 1);
 
@@ -329,6 +330,7 @@ function saveOrderDetail() {
         }
         i++;
         orderDetail.push(orderDetailOB);
+        setOrders();
 
     }
 
@@ -337,7 +339,7 @@ function saveOrderDetail() {
 
 $("#btnPurchaseOrder").click(function () {
     saveOrderDetail();
-    let z = x++;
+    let z = t++;
     displayOrderId();
     let balance = $("#txtBalance").val();
     if (parseInt(balance) < 0) {
@@ -368,6 +370,7 @@ function purchaseOrderMethod() {
     purchaseOrder.push(OrderDetail);
     duplicatePlaceOrder = placeOrder;
     placeOrder = [];
+    setOrders();
     clearDetail();
     alert("Order Placed!!");
 }

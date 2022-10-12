@@ -8,6 +8,7 @@ $("#save_btn").click(function () {
 
     saveCustomer(cusId, cusName, cusAddress, cusSalary);
 
+
 });
 
 function loadAllCustomers() {
@@ -194,6 +195,7 @@ function saveCustomer(cusId, cusName, cusAddress, cusSalary) {
     bindRowClickEvent();
     loadAllCustomersForOption();
     setTextfieldValues("", "", "", "");
+    setCus();
 
 }
 
@@ -203,6 +205,7 @@ function deleteCustomer(customerID) {
         let indexNumber = customers.indexOf(customer);
         customers.splice(indexNumber, 1);
         loadAllCustomers();
+        setCus();
         return true;
     } else {
         return false;

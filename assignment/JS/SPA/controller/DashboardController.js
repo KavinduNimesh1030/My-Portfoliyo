@@ -1,4 +1,19 @@
+$(document).ready(function () {
+    $("#txtDbTotCus").text("Total Customers : " + customers.length);
+    $("#txtDbTotOrders").text("Total Order : " +orderDetail.length);
+    $("#txtDbTotItem").text("Total Item : " +items.length);
 
+});
+
+function setOrders(){
+    $("#txtDbTotOrders").text("Total Orders : " + purchaseOrder.length);
+}
+function setCus(){
+    $("#txtDbTotCus").text("Total Customers : " + customers.length);
+}
+function setItems(){
+    $("#txtDbTotItem").text("Total Items : " + items.length);
+}
     $("#customerMain").hide()
     $("#ItemMain").hide()
     $("#placeOrderMain").hide()

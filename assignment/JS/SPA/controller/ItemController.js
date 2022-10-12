@@ -90,6 +90,7 @@ $("#btnSaveItem").click(function (){
     let price = $("#txtItemPrice").val();
 
     saveItem(code,itemName,qty ,price);
+    setItems();
 })
 
 function setItemTextfeildValues(code,itemName,qty,price) {
@@ -116,6 +117,7 @@ function saveItem(code, itemName, qty, price) {
     bindItemRowClickEvent();
     setItemTextfeildValues("", "", "", "");
     loadAllItemsForOption();
+    setItems();
 
 }
 function loadAllItems() {
@@ -192,6 +194,7 @@ function bindItemRowClickEvent() {
             setItemTextfeildValues("", "", "", "");
             alert("Item Successfully Deleted..");
             console.log("if condition")
+            setItems();
         }
     });
 
