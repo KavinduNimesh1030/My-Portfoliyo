@@ -80,11 +80,17 @@ $("#btnAddToCart").click(function () {
                     loadAllCartItems();
                     updateItemQty();
                     /*--------------------------------------------------------*/
-                   /* let oldValue =  parseInt($("#lblTotalAmount").text());
-                    let newValue  = (parseInt(oldValue)+parseInt(newTot))-parseInt(oldValue);
-                    $("#lblTotalAmount").text(newValue);
-                    $("#lblSubTotalAmount").text(newValue);*/
-                    calTotal();
+                    if(x == 0){
+                      /*  let oldValue =  parseInt($("#lblTotalAmount").text());
+                        let newValue  = (parseInt(oldValue)+parseInt(newTot))-parseInt(oldValue);
+                        $("#lblTotalAmount").text(newValue);
+                        $("#lblSubTotalAmount").text(newValue);*/
+                        getTot()
+                    }else {
+                       getTot()
+                    }
+
+
                     /*--------------------------------------------------------*/
                     console.log("aaa");
                     newQty =0;
@@ -94,12 +100,15 @@ $("#btnAddToCart").click(function () {
                     addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
 
                 }
+
 */
+                x++;
         }
             for (let cart1 of placeOrder){
                 if(cart1.itemCode != $("#txtOrderItemId").val()) {
                     console.log("no");
                     addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
+                        getTot();
                         return false;
                 }
             }
@@ -132,8 +141,31 @@ function calTotal(){
     let tot ;
     for (let x of placeOrder) {
         tot =+ parseInt(x.total);
+        $("#lblTotalAmount").text((parseInt(tot)+parseInt(currentVal))-parseInt(x.itemPrice));
+        $("#lblTotalAmount").text((parseInt(tot)+parseInt(currentVal))-parseInt(x.itemPrice));
+
     }
-    $("#lblTotalAmount").text((parseInt(tot)+parseInt(currentVal))-parseInt(currentVal));
+
+
+}
+function getTot(){
+    let y ;
+    v =[];
+    for (let j = 0; j < placeOrder.length; j++) {
+        /* let amount = placeOrder[j].total+placeOrder[j+1].total;*/
+        x = placeOrder[j].total
+        console.log(x);
+        v[j]=x;
+
+    }
+    var total = 0;
+    for (var i = 0; i < v.length; i++) {
+        total += v[i] << 0;
+    }
+    console.log(total);
+    $("#lblTotalAmount").text(total);
+    $("#lblSubTotalAmount").text(total);
+
 
 }
 function updateItemQty(){
