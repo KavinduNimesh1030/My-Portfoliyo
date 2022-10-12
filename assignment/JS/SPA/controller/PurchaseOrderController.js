@@ -65,9 +65,13 @@ $("#btnAddToCart").click(function () {
     let itemQty = $("#txtOrderQty").val();
     let itemTotal = $("#txtOrderItemPrice").val() * $("#txtOrderQty").val();
     let orderId = $("#txtOrderId").val();
+    let qty = $("#txtOrderItemQty").val();
+    if(parseInt(qty)<parseInt(itemQty)){
+        alert("please enter amount lower than "+parseInt(itemQty));
+    }else {
 
-    let x = 0;
-    if (placeOrder.length != 0) {
+        let x = 0;
+        if (placeOrder.length != 0) {
 
             for (let cart of placeOrder) {
                 console.log("1st");
@@ -81,41 +85,33 @@ $("#btnAddToCart").click(function () {
                     updateItemQty();
                     /*--------------------------------------------------------*/
                     if(x == 0){
-                      /*  let oldValue =  parseInt($("#lblTotalAmount").text());
-                        let newValue  = (parseInt(oldValue)+parseInt(newTot))-parseInt(oldValue);
-                        $("#lblTotalAmount").text(newValue);
-                        $("#lblSubTotalAmount").text(newValue);*/
                         getTot()
                     }else {
-                       getTot()
+                        getTot()
                     }
-
 
                     /*--------------------------------------------------------*/
                     console.log("aaa");
                     newQty =0;
                     return false;
-                }/* else if(cart.itemCode != $("#txtOrderItemId").val()) {
-                    console.log("no");
-                    addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
-
                 }
-
-*/
                 x++;
-        }
+            }
             for (let cart1 of placeOrder){
                 if(cart1.itemCode != $("#txtOrderItemId").val()) {
                     console.log("no");
                     addItem(itemCode, itemName, itemPrice, $("#txtOrderQty").val(), parseFloat(itemTotal));
-                        getTot();
-                        return false;
+                    getTot();
+                    return false;
                 }
             }
 
-    } else {
-        console.log("else")
-        addItem(itemCode, itemName, itemPrice, itemQty, parseFloat(itemTotal));
+        } else {
+            console.log("else")
+            addItem(itemCode, itemName, itemPrice, itemQty, parseFloat(itemTotal));
+        }
+
+
     }
 
 
