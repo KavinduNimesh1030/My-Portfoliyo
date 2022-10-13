@@ -1,4 +1,4 @@
-var customers = [];
+
 $("#save_btn").click(function () {
 
     let cusId = $("#cusId").val();
@@ -183,7 +183,7 @@ $("#cusSalary").on('keydown', function (event) {
 
 function saveCustomer(cusId, cusName, cusAddress, cusSalary) {
 
-    var customer = {
+    customer = {
         "id": cusId,  //key : value
         "name": cusName,
         "address": cusAddress,

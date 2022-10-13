@@ -1,6 +1,4 @@
 var placeOrder = [];
-var purchaseOrder = [];
-var orderDetail = [];
 var cartItemsId = [];
 var duplicatePlaceOrder = [];
 var x = 0;
@@ -190,7 +188,7 @@ function updateItemQty(){
 
 function addItem(itemCode, itemName, price, qty, total) {
 
-    var order = {
+     order = {
         "itemCode": itemCode,
         "itemName": itemName,
         "itemPrice": price,
@@ -374,7 +372,7 @@ function purchaseOrderMethod() {
     let itemCode = $("#txtOrderItemId").val();
     let cusId = $("#txtOrderCusId").val();
 
-    var OrderDetail = {
+     OrderDetail = {
         'orderId': orderId,
         'orderDate': orderDate,
         'itemCode': itemCode,

@@ -1,4 +1,4 @@
-var items = [];
+
 
 function validationItem(input, pattern, txt, war) {
     var id = pattern;
@@ -104,7 +104,7 @@ function setItemTextfeildValues(code,itemName,qty,price) {
 
 function saveItem(code, itemName, qty, price) {
 
-    var item = {
+     item = {
         "code": code,
         "itemName": itemName,
         "quantity": qty,
