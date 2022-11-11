@@ -53,9 +53,22 @@
   <section id="homeSec">
 
   </section>
+  <button id="btnStart">Start</button>
   <button id="btnStop">Stop</button>
 </main>
 <script>
+
+  var letters = ["A","B","C","D","E","F"];
+
+
+  function setLetters(){
+    $("#arraySec").empty();
+    for (let i = 0; i < letters.length; i++) {
+      $("#arraySec").append(`<div><h1>${letters[i]}</h1></div>`);
+
+    }
+   
+  }
 
 </script>
 </body>
