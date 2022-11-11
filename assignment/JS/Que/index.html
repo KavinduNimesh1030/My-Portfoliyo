@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Js Que</title>
   <style>
+    main{
+      transform: translateY(-98px);
+    }
     #imageMain{
       display: flex;
       justify-content: space-between;
@@ -12,15 +15,15 @@
     }
     #imageMain>div{
       width: 100px;
-      height: 100px;
-      background: url("assets/Run (2).png");
+      height: 150px;
+      background: url("assets/man.gif");
       background-size: cover;
       background-position: center;
     }
     #homeSec{
       width: 271px;
       height: 250px;
-      transform: translate(1087px, 204px);
+      transform: translate(1061px, 160px);
       background: url("assets/Home.gif");
       background-position: center;
       background-size: cover;
@@ -46,11 +49,19 @@
     #btnSec{
       padding-left:483px;
     }
+    #tittle{
+      font-size: 45px;
+      color: #c21e1e;
+      text-align: center;
+      padding-bottom: 0;
+      transform: translateY(83px);
+    }
   </style>
 </head>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <body>
 <main>
+  <h1 id="tittle">Js Que</h1>
   <section id="arraySec">
 
   </section>
@@ -73,7 +84,7 @@
 </main>
 <script>
   var time = null;
-  
+
   $("#btnStart").click(function (){
     clearInterval(time);
     time =setInterval(setLetters,1000);
