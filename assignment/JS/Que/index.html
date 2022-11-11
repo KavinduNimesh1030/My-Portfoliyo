@@ -57,6 +57,8 @@
   <button id="btnStop">Stop</button>
 </main>
 <script>
+  var time = null;
+
 
   var letters = ["A","B","C","D","E","F"];
 
@@ -67,7 +69,8 @@
       $("#arraySec").append(`<div><h1>${letters[i]}</h1></div>`);
 
     }
-   
+    let x = letters.pop();
+    letters.unshift(x);
   }
 
 </script>
