@@ -13,20 +13,35 @@
     #imageMain>div{
       width: 100px;
       height: 100px;
-      border: 2px solid black;
+      background: url("assets/Run (2).png");
+      background-size: cover;
+      background-position: center;
     }
     #homeSec{
-      width: 250px;
+      width: 271px;
       height: 250px;
-      transform: translate(1087px, 165px);
-      border: 2px solid black;
+      transform: translate(1087px, 204px);
+      background: url("assets/Home.gif");
+      background-position: center;
+      background-size: cover;
     }
+    #arraySec{
+      display: flex;
+      justify-content: space-between;
+      width: 1000px;
+      transform: translateY(419px);
+    }
+
+
 
   </style>
 </head>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <body>
 <main>
+  <section id="arraySec">
+
+  </section>
   <section id="imageMain">
     <div></div>
     <div></div>
@@ -38,6 +53,10 @@
   <section id="homeSec">
 
   </section>
+  <button id="btnStop">Stop</button>
 </main>
+<script>
+
+</script>
 </body>
 </html>
