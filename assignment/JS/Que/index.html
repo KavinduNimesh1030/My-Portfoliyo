@@ -31,9 +31,21 @@
       width: 1000px;
       transform: translateY(419px);
     }
-
-
-
+    #btnStart{
+      background-color: #001e80;
+      width: 60px;
+      height: 30px;
+      transform: translate(86px, -113px);
+    }
+    #btnStop{
+      background-color: #c21e1e;
+      width: 60px;
+      height: 30px;
+      transform: translate(100px, -113px);
+    }
+    #btnSec{
+      padding-left:483px;
+    }
   </style>
 </head>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
@@ -53,24 +65,34 @@
   <section id="homeSec">
 
   </section>
-  <button id="btnStart">Start</button>
-  <button id="btnStop">Stop</button>
+  <section id="btnSec">
+    <button id="btnStart">Start</button>
+    <button id="btnStop">Stop</button>
+  </section>
+
 </main>
 <script>
   var time = null;
+  
+  $("#btnStart").click(function (){
+    clearInterval(time);
+    time =setInterval(setLetters,1000);
+  });
 
+  $("#btnStop").click(function (){
+    clearInterval(time);
+  });
 
   var letters = ["A","B","C","D","E","F"];
 
 
   function setLetters(){
-    $("#arraySec").empty();
-    for (let i = 0; i < letters.length; i++) {
-      $("#arraySec").append(`<div><h1>${letters[i]}</h1></div>`);
-
-    }
-    let x = letters.pop();
-    letters.unshift(x);
+      $("#arraySec").empty();
+      for (let i = 0; i < letters.length; i++) {
+        $("#arraySec").append(`<div><h1>${letters[i]}</h1></div>`);
+      }
+      let x = letters.pop();
+      letters.unshift(x);
   }
 
 </script>
