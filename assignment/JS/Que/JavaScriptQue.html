@@ -35,6 +35,22 @@
         #mainSec > div:last-child {
             transform: translateY(65px);
         }
+        #btnSec{
+            padding-left: 633px;
+            transform: translateY(490px);
+        }
+        #btnStop{
+            background-color: white;
+            border: 2px solid black;
+            width: 80px;
+            height: 40px;
+        }
+        #btnStart{
+            background-color: white;
+            border: 2px solid black;
+            width: 80px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -54,9 +70,13 @@
     //var colors = ["#b9a7a7", '#a67d7d', '#966161', '#bc6060', '#b84747', '#dc4141'];
 
     //setColors();
-    $("#btnStart").on(function (){
+    $("#btnStart").click(function (){
         clearInterval(time);
         time = setInterval(setColors,600);
+    });
+    $("#btnStop").click(function (){
+        clearInterval(time);
+
     });
 
 
