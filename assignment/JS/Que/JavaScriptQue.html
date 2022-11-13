@@ -61,7 +61,8 @@
             $('#mainSec').append(`<div style="background-color: ${colors[i]}"></div>`);
 
         }
-       
+        var lastColor = colors.pop();
+        colors.unshift(lastColor);
     }
 
 </script>
