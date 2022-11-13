@@ -5,17 +5,35 @@
     <link href="assets/css/normalize.css" rel="stylesheet">
     <title>Java Script Que</title>
     <style>
-        #mainSec{
+        #mainSec {
             position: absolute;
             display: flex;
-            height: 40px;
+            height: 60px;
             width: 500px;
             border: 2px solid black;
+            border-left: hidden;
+            border-right: hidden;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
             margin: auto;
+            justify-content: space-between;
+
+        }
+
+        #mainSec > div {
+            width: 60px;
+            height: 40px;
+            transform: translateY(8px);
+        }
+
+        #mainSec > div:first-child {
+            transform: translateY(-47px);
+        }
+
+        #mainSec > div:last-child {
+            transform: translateY(65px);
         }
     </style>
 </head>
@@ -24,9 +42,27 @@
     <section id="mainSec">
 
     </section>
+    <section id="btnSec">
+        <button id="btnStart">Start</button>
+        <button id="btnStop">Stop</button>
+    </section>
 </main>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
+    var time = null;
+    var colors = ["red", "green", "pink", "blue", "yellow", "gray"];
+    //var colors = ["#b9a7a7", '#a67d7d', '#966161', '#bc6060', '#b84747', '#dc4141'];
+
+
+
+    function setColors() {
+        $("#mainSec").empty();
+        for (let i = 0; i < colors.length; i++) {
+            $('#mainSec').append(`<div style="background-color: ${colors[i]}"></div>`);
+
+        }
+       
+    }
 
 </script>
 </body>
