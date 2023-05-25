@@ -1,4 +1,25 @@
 # My-Portfoliyo
+
+Technologies : HTML, CSS, JavaScript
+
+## portfolio view
+
+
+https://github.com/KavinduNimesh1030/My-Portfoliyo/assets/101209063/ba76c920-cd23-4fa7-b570-e43bc22c132b
+
+
+## Content in this Repository
+
+My Portfolio
+
+Web-POS System 
+
+Calculator
+
+2D Game 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
 1.Site Map URL    : https://www.gloomaps.com/z9dj2VNM4g
 
 2.Wireframe URL   : https://wireframe.cc/4H2vOX
